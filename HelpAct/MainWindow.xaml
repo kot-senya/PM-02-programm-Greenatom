@@ -6,5 +6,5 @@
         xmlns:local="clr-namespace:HelpAct"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Frame x:Name="contentFrame"/>
+    <Frame x:Name="contentFrame" NavigationUIVisibility="Hidden"/>
 </Window>
