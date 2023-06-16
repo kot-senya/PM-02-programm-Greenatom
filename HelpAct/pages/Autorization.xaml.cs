@@ -24,5 +24,10 @@ namespace HelpAct.pages
         {
             InitializeComponent();
         }
+
+        private void bAuth_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

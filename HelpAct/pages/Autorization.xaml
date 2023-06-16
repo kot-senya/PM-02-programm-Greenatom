@@ -9,31 +9,43 @@
       Title="Autorization" Background="#0E498B">
 
     <Grid>
-        <Border Width="430" Height="390" Background="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Margin="0,0,0,0" >
+        <Border Width="430" Height="390" Background="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" >
             <Border.Effect>
-                <DropShadowEffect BlurRadius="10" Color="#0E3969" Direction="195" Opacity=".4"
+                <DropShadowEffect BlurRadius="7" Color="#0E3969" Direction="197" Opacity=".3"
             RenderingBias="Performance" ShadowDepth="60" />
             </Border.Effect>
             <StackPanel>
-                <TextBlock Text="Авторизируйтесь" FontSize="20" HorizontalAlignment="Center" Foreground="#A77748"/>
-                <TextBlock Text="Ло" FontSize="20" Foreground="#A77748" HorizontalAlignment="Left"  Margin="50 35 0 0" VerticalAlignment="Top" />
+                <TextBlock Text="Авторизируйтесь" FontSize="30" HorizontalAlignment="Center" Foreground="#000000" Margin="0 20 0 0" RenderTransformOrigin="0.492,0.62"/>
+                <TextBlock Text="Логин" FontSize="20" Foreground="#000000" HorizontalAlignment="Left"  Margin="6 59 0 0" VerticalAlignment="Top"  RenderTransformOrigin="0.511,0.631" >
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.155"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+                </TextBlock>
                 <StackPanel>
-                    <Rectangle RadiusX="15" RadiusY="15" StrokeThickness="2" Fill="#FAEDCD" Stroke="#A77748" Width="320" Height="35" />
-                    <TextBox x:Name="aLogin"  Width="289" Height="30" Text=""  VerticalContentAlignment="Center" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" Background="#FAEDCD" Foreground="#A77748" Margin="25 -36 25 0" />
+                    <Rectangle RadiusX="7" RadiusY="7" StrokeThickness="2" Fill="#D9D9D9"   Width="310" Height="59" Margin="0 -36 0 0"/>
+                    <TextBox x:Name="aLogin"  Width="289" Height="30" Text=""  VerticalContentAlignment="Center" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" Background="#D9D9D9" Foreground="#A77748" Margin="25 -56 24 0" />
                 </StackPanel>
-                <TextBlock Text="Пароль" FontSize="20" Foreground="#A77748" HorizontalAlignment="Left"  Margin="50 20 0 0" VerticalAlignment="Top" />
+                <TextBlock Text="Пароль" FontSize="20" Foreground="#000000" HorizontalAlignment="Left"  Margin="62 27 0 0" RenderTransformOrigin="0.511,0.631" Height="27" Width="74" >
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.155"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
                 <StackPanel>
-                    <Rectangle RadiusX="15" RadiusY="15" StrokeThickness="2" Fill="#FAEDCD" Stroke="#A77748"  Width="320" Height="35"/>
-                    <PasswordBox x:Name="aPass" Password="" Width="289" Height="25"  FontSize="15" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" Background="#FAEDCD" Foreground="#A77748" Margin="25 -36 20 0"/>
+                    <Rectangle RadiusX="7" RadiusY="7" StrokeThickness="2" Fill="#D9D9D9"   Width="310" Height="59" Margin="0 0 0 0"/>
+                    <PasswordBox x:Name="aPass" Password="" Width="289" Height="30"  FontSize="15" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" Background="#D9D9D9" Foreground="#A77748" Margin="25 -56 24 0"/>
                 </StackPanel>
-
+                <Button x:Name="bAuth" Width="222" Height="38" Margin="0 37 0 0" Click="bAuth_Click" Content="Вход" Foreground="#D9D9D9" Background="#0E498B"  FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{DynamicResource RoundedButtonStyle}" RenderTransformOrigin="0.5,0.611"/>
             </StackPanel>
-
-
-
-
-
         </Border>
-        
     </Grid>
 </Page>
