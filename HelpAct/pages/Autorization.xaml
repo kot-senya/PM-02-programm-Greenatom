@@ -16,7 +16,7 @@
             </Border.Effect>
             <StackPanel>
                 <TextBlock Text="Авторизируйтесь" FontSize="20" HorizontalAlignment="Center" Foreground="#A77748"/>
-                <TextBlock Text="Логин" FontSize="20" Foreground="#A77748" HorizontalAlignment="Left"  Margin="50 35 0 0" VerticalAlignment="Top" />
+                <TextBlock Text="Ло" FontSize="20" Foreground="#A77748" HorizontalAlignment="Left"  Margin="50 35 0 0" VerticalAlignment="Top" />
                 <StackPanel>
                     <Rectangle RadiusX="15" RadiusY="15" StrokeThickness="2" Fill="#FAEDCD" Stroke="#A77748" Width="320" Height="35" />
                     <TextBox x:Name="aLogin"  Width="289" Height="30" Text=""  VerticalContentAlignment="Center" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" Background="#FAEDCD" Foreground="#A77748" Margin="25 -36 25 0" />
