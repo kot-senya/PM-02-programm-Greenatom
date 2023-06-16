@@ -67,8 +67,78 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="pages\Autorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\uITactivCreativAct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\uITactivMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\uITactivPersonalAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\uUserMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\uUserPersonalAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\uUserSapportMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\uUserSapportPersonalAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\uUserSapportRequestForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\uUserSapportSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pages\Autorization.xaml.cs">
+      <DependentUpon>Autorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\uITactivCreativAct.xaml.cs">
+      <DependentUpon>uITactivCreativAct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\uITactivMainPage.xaml.cs">
+      <DependentUpon>uITactivMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\uITactivPersonalAccount.xaml.cs">
+      <DependentUpon>uITactivPersonalAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\uUserMainPage.xaml.cs">
+      <DependentUpon>uUserMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\uUserPersonalAccount.xaml.cs">
+      <DependentUpon>uUserPersonalAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\uUserSapportMainPage.xaml.cs">
+      <DependentUpon>uUserSapportMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\uUserSapportPersonalAccount.xaml.cs">
+      <DependentUpon>uUserSapportPersonalAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\uUserSapportRequestForm.xaml.cs">
+      <DependentUpon>uUserSapportRequestForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\uUserSapportSearch.xaml.cs">
+      <DependentUpon>uUserSapportSearch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
