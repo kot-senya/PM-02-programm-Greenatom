@@ -6,9 +6,34 @@
       xmlns:local="clr-namespace:HelpAct.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Autorization">
+      Title="Autorization" Background="#0E498B">
 
     <Grid>
+        <Border Width="430" Height="390" Background="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Margin="0,0,0,0" >
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" Color="#0E3969" Direction="195" Opacity=".4"
+            RenderingBias="Performance" ShadowDepth="60" />
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Авторизируйтесь" FontSize="20" HorizontalAlignment="Center" Foreground="#A77748"/>
+                <TextBlock Text="Логин" FontSize="20" Foreground="#A77748" HorizontalAlignment="Left"  Margin="50 35 0 0" VerticalAlignment="Top" />
+                <StackPanel>
+                    <Rectangle RadiusX="15" RadiusY="15" StrokeThickness="2" Fill="#FAEDCD" Stroke="#A77748" Width="320" Height="35" />
+                    <TextBox x:Name="aLogin"  Width="289" Height="30" Text=""  VerticalContentAlignment="Center" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" Background="#FAEDCD" Foreground="#A77748" Margin="25 -36 25 0" />
+                </StackPanel>
+                <TextBlock Text="Пароль" FontSize="20" Foreground="#A77748" HorizontalAlignment="Left"  Margin="50 20 0 0" VerticalAlignment="Top" />
+                <StackPanel>
+                    <Rectangle RadiusX="15" RadiusY="15" StrokeThickness="2" Fill="#FAEDCD" Stroke="#A77748"  Width="320" Height="35"/>
+                    <PasswordBox x:Name="aPass" Password="" Width="289" Height="25"  FontSize="15" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" Background="#FAEDCD" Foreground="#A77748" Margin="25 -36 20 0"/>
+                </StackPanel>
+
+            </StackPanel>
+
+
+
+
+
+        </Border>
         
     </Grid>
 </Page>
