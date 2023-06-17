@@ -156,6 +156,24 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="fonts\static\ChivoMono-Black.ttf" />
+    <Resource Include="fonts\static\ChivoMono-BlackItalic.ttf" />
+    <Resource Include="fonts\static\ChivoMono-Bold.ttf" />
+    <Resource Include="fonts\static\ChivoMono-BoldItalic.ttf" />
+    <Resource Include="fonts\static\ChivoMono-ExtraBold.ttf" />
+    <Resource Include="fonts\static\ChivoMono-ExtraBoldItalic.ttf" />
+    <Resource Include="fonts\static\ChivoMono-ExtraLight.ttf" />
+    <Resource Include="fonts\static\ChivoMono-ExtraLightItalic.ttf" />
+    <Resource Include="fonts\static\ChivoMono-Italic.ttf" />
+    <Resource Include="fonts\static\ChivoMono-Light.ttf" />
+    <Resource Include="fonts\static\ChivoMono-LightItalic.ttf" />
+    <Resource Include="fonts\static\ChivoMono-Medium.ttf" />
+    <Resource Include="fonts\static\ChivoMono-MediumItalic.ttf" />
+    <Resource Include="fonts\static\ChivoMono-Regular.ttf" />
+    <Resource Include="fonts\static\ChivoMono-SemiBold.ttf" />
+    <Resource Include="fonts\static\ChivoMono-SemiBoldItalic.ttf" />
+    <Resource Include="fonts\static\ChivoMono-Thin.ttf" />
+    <Resource Include="fonts\static\ChivoMono-ThinItalic.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -165,7 +183,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="fonts\" />
     <Folder Include="picture\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
