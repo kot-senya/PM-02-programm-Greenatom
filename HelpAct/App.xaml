@@ -13,6 +13,8 @@
                 <ResourceDictionary Source="Styles/TabControlStyle.xaml"/>
                 <ResourceDictionary Source="Styles/TextBoxStyle.xaml"/>
                 <ResourceDictionary Source="Styles/PasswordBoxStyle.xaml"/>
+                <ResourceDictionary Source="Styles/MenuStyle.xaml"/>
+                
             </ResourceDictionary.MergedDictionaries>
 
             <FontFamily x:Key="Bradobrei">pack://appliction;,,,fonts/#Bradobrei</FontFamily>

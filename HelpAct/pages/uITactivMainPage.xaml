@@ -8,7 +8,28 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="uITactivMainPage">
 
-    <Grid>
-        
-    </Grid>
+    <Viewbox Stretch="Uniform">
+        <Grid>
+            <Menu>
+                <MenuItem x:Name="mMain" Header="Главная" Style="{StaticResource m_main}"/>
+                <MenuItem x:Name="mSuarch" Header="Поиск" Style="{StaticResource m_main}"/>
+                <MenuItem x:Name="mOther" Header="Прочее" Style="{StaticResource m_withDown}">
+                    <MenuItem x:Name="m" Header="ОООО" Style="{StaticResource m_dop}"/>
+                    <MenuItem x:Name="e" Header="ОООО" Style="{StaticResource m_dop}"/>
+                </MenuItem>
+                <MenuItem x:Name="mUserProfile" Header="" Style="{StaticResource m_main}">
+                    <MenuItem.Icon>
+                        <Image Source="/picture/ic_account_blue.png"
+                           Stretch="Uniform" />
+                    </MenuItem.Icon>                    
+                </MenuItem>
+                <MenuItem x:Name="mExist" Header="" Style="{StaticResource m_main}">
+                    <MenuItem.Icon>
+                        <Image Source="/picture/ic_exit_blue.png"
+                           Stretch="Uniform" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </Menu>
+        </Grid>
+    </Viewbox>
 </Page>

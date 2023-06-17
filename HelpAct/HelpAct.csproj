@@ -111,6 +111,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Styles\MenuStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\PasswordBoxStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -194,6 +198,16 @@
   <ItemGroup>
     <Resource Include="picture\ic_lock_blue.png" />
     <Resource Include="picture\ic_lock_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\ic_exit_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\ic_account_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\ic_down.png" />
+    <Resource Include="picture\ic_search_blue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
