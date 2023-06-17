@@ -5,7 +5,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type MenuItem}">
-                    <Border x:Name="border" Background="white" BorderThickness="0">
+                    <Border x:Name="border" Background="white" BorderThickness="0" 
+                            CornerRadius="5">
                         <Grid>
                             <ContentPresenter x:Name="Icon"
                                               ContentSource="Icon"
@@ -19,7 +20,7 @@
                                               TextBlock.Foreground="#0E498B"                                              
                                               TextBlock.FontFamily="{DynamicResource Gabriela}"
                                               TextBlock.FontSize="15"
-                                              HorizontalAlignment="Center"
+                                              HorizontalAlignment="Right"
                                               VerticalAlignment="Center"
                                               Margin="10,0,10,0" />
                         </Grid>
@@ -43,10 +44,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type MenuItem}">
                     <Border x:Name="border"
-                                Background="white"
-                                BorderThickness="0"
-                                Height="30"
-                                Width="90">
+                            Background="white"
+                            BorderThickness="0"                            
+                            CornerRadius="5"
+                            Height="30"
+                            Width="90">
                         <Grid>
                             <ContentPresenter ContentSource="Icon"
                                                   HorizontalAlignment="Left"
@@ -101,6 +103,65 @@
         </Setter>
     </Style>
 
+    <Style x:Key="m_userWithDown" TargetType="MenuItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type MenuItem}">
+                    <Border x:Name="border"
+                            Background="white"
+                            BorderThickness="0"
+                            CornerRadius="5"
+                            Height="30"
+                            Width="45">
+                        <Grid>
+                            <ContentPresenter ContentSource="Icon"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"
+                                                  Height="25"
+                                                  Width="25"                                              
+                                                  Margin="5,0,5,0" />
+                            <ContentPresenter ContentSource="Header"
+                                              TextBlock.Foreground="#0E498B"
+                                              TextBlock.FontSize="15"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              Margin="10 0 0 0"/>
+
+                            <Popup x:Name="PART_Popup"
+                                       AllowsTransparency="True"
+                                       IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}"
+                                       Placement="Bottom"
+                                       PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}">
+                                <Border x:Name="SubMenuBorder" Background="White" BorderBrush="#D9D9D9">
+                                    <ScrollViewer x:Name="SubMenuScrollViewer"
+                                                      Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer,TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                                        <Grid RenderOptions.ClearTypeHint="Enabled">
+                                            <Canvas HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                            <ItemsPresenter x:Name="ItemsPresenter" />
+                                        </Grid>
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSuspendingPopupAnimation" Value="True">
+                            <Setter Property="PopupAnimation" TargetName="PART_Popup" Value="None" />
+                        </Trigger>
+                        <Trigger Property="IsHighlighted" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="#D9D9D9" />
+                            <Setter Property="BorderBrush" TargetName="border" Value="#D9D9D9" />
+                        </Trigger>
+                        <Trigger Property="MenuItem.IsMouseOver" Value="True">
+                            <Setter Property="PopupAnimation" TargetName="PART_Popup" Value="None" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style x:Key="m_dop" TargetType="MenuItem">
         <Setter Property="Template">
             <Setter.Value>
@@ -109,7 +170,6 @@
                         <Grid>
                             <ContentPresenter ContentSource="Header"
                                                   TextBlock.Foreground="#0E498B"
-                                                  TextBlock.FontFamily="{StaticResource Gabriela}"
                                                   TextBlock.FontSize="15"
                                                   HorizontalAlignment="Left" 
                                                   VerticalAlignment="Center"

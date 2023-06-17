@@ -7,29 +7,31 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="uITactivMainPage">
+    <StackPanel Orientation="Vertical">
+        <Viewbox Stretch="Uniform" Height="45" MinWidth="800">
+            <Grid >
+                <Menu Background="White">
+                    <MenuItem x:Name="mMain" Header="Главная" Style="{StaticResource m_main}"/>
+                    <MenuItem x:Name="mSuarch" Header="Поиск" Style="{StaticResource m_main}"/>
+                    <MenuItem x:Name="mOther" Header="Прочее" Style="{StaticResource m_withDown}">
+                        <MenuItem x:Name="m" Header="ОООО" Style="{StaticResource m_dop}"/>
+                        <MenuItem x:Name="e" Header="ОООО" Style="{StaticResource m_dop}"/>
+                    </MenuItem>
+                    <MenuItem MinWidth="240" IsEnabled="False"/>
+                    <MenuItem x:Name="mUserProfile" Header="" Style="{StaticResource m_userWithDown}">
+                        <MenuItem.Icon>
+                            <Image Source="/picture/ic_account_blue.png" Stretch="Uniform" />
+                        </MenuItem.Icon>
+                        <MenuItem x:Name="mExist" Header="Выйти" Style="{StaticResource m_main}" Width="90">
+                            <MenuItem.Icon>
+                                <Image Source="/picture/ic_exit_blue.png"  Stretch="Uniform" Height="17"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
 
-    <Viewbox Stretch="Uniform">
-        <Grid>
-            <Menu>
-                <MenuItem x:Name="mMain" Header="Главная" Style="{StaticResource m_main}"/>
-                <MenuItem x:Name="mSuarch" Header="Поиск" Style="{StaticResource m_main}"/>
-                <MenuItem x:Name="mOther" Header="Прочее" Style="{StaticResource m_withDown}">
-                    <MenuItem x:Name="m" Header="ОООО" Style="{StaticResource m_dop}"/>
-                    <MenuItem x:Name="e" Header="ОООО" Style="{StaticResource m_dop}"/>
-                </MenuItem>
-                <MenuItem x:Name="mUserProfile" Header="" Style="{StaticResource m_main}">
-                    <MenuItem.Icon>
-                        <Image Source="/picture/ic_account_blue.png"
-                           Stretch="Uniform" />
-                    </MenuItem.Icon>                    
-                </MenuItem>
-                <MenuItem x:Name="mExist" Header="" Style="{StaticResource m_main}">
-                    <MenuItem.Icon>
-                        <Image Source="/picture/ic_exit_blue.png"
-                           Stretch="Uniform" />
-                    </MenuItem.Icon>
-                </MenuItem>
-            </Menu>
-        </Grid>
-    </Viewbox>
+                </Menu>
+            </Grid>
+        </Viewbox>
+    </StackPanel>
+
 </Page>
