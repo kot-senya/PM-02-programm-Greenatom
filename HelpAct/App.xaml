@@ -8,10 +8,10 @@
         <ResourceDictionary>
 
             <ResourceDictionary.MergedDictionaries>
-                
-                <ResourceDictionary Source="Styles/ButtonStyle.xaml"/>
-                <ResourceDictionary Source="Styles/TabControlStyle.xaml"/>
 
+                <ResourceDictionary Source="Styles/TabControlStyle.xaml"/>
+                <ResourceDictionary Source="Styles/TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="Styles/PasswordBoxStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             
         </ResourceDictionary>

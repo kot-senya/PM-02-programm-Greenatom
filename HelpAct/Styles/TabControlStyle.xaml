@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
-    <Style x:Key="RoundedTabControlStyle" TargetType="{x:Type TabControl}">
+    <Style x:Key="tbc_RoundedTabControlStyle" TargetType="{x:Type TabControl}">
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Template">
@@ -31,7 +31,7 @@
         </Setter>
     </Style>
     
-    <Style x:Key="RoundedTabItemStyle" TargetType="{x:Type TabItem}">
+    <Style x:Key="tbi_RoundedTabItemStyle" TargetType="{x:Type TabItem}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TabItem">

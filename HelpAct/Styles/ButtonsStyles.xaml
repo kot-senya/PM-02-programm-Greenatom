@@ -15,7 +15,7 @@
         </Setter>
     </Style>
     
-    <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+    <Style x:Key="btn_RoundedButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
         <Setter Property="Background" Value="#0E498B"/>
         <Setter Property="Foreground" Value="White"/>
