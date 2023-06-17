@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HelpAct.pages
+namespace HelpAct
 {
     /// <summary>
     /// Логика взаимодействия для uUserSapportMainPage.xaml
