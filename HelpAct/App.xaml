@@ -14,6 +14,11 @@
                 <ResourceDictionary Source="Styles/TextBoxStyle.xaml"/>
                 <ResourceDictionary Source="Styles/PasswordBoxStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+
+            <FontFamily x:Key="Bradobrei">pack://appliction;,,,fonts/#Bradobrei</FontFamily>
+            <FontFamily x:Key="Casper">pack://appliction;,,,fonts/#Casper</FontFamily>
+            <FontFamily x:Key="Forum">fonts/#Forum Regular</FontFamily>
+            <FontFamily x:Key="Gabriela">fonts/#Gabriela Regular</FontFamily>
             
         </ResourceDictionary>
         

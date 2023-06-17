@@ -172,6 +172,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="fonts\Bradobrei.otf" />
+    <Resource Include="fonts\Casper.ttf" />
+    <Resource Include="fonts\Forum-Regular.otf" />
+    <Resource Include="fonts\Gabriela-Regular.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -182,7 +186,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\" />
-    <Folder Include="fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="picture\ic_user_blue.png" />
