@@ -171,6 +171,7 @@
                             <ContentPresenter ContentSource="Header"
                                                   TextBlock.Foreground="#0E498B"
                                                   TextBlock.FontSize="15"
+                                                    TextBlock.FontFamily="Gabriela"
                                                   HorizontalAlignment="Left" 
                                                   VerticalAlignment="Center"
                                                   Margin="35,0,0,0" />

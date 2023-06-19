@@ -24,5 +24,10 @@ namespace HelpAct
         {
             InitializeComponent();
         }
+
+        private void mUserProfile_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new uITactivPersonalAccount());
+        }
     }
 }

@@ -17,8 +17,8 @@
                 
             </ResourceDictionary.MergedDictionaries>
 
-            <FontFamily x:Key="Forum">fonts/#Forum Regular</FontFamily>
-            <FontFamily x:Key="Gabriela">fonts/#Gabriela Regular</FontFamily>
+            <FontFamily x:Key="Forum">fonts/#Forum</FontFamily>
+            <FontFamily x:Key="Gabriela">fonts/#Gabriela</FontFamily>
             
         </ResourceDictionary>
         

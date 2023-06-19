@@ -8,7 +8,107 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="uUserSapportMainPage">
 
-    <Grid>
-        
-    </Grid>
+    <Viewbox Stretch="Uniform">
+        <Border Width="800" Height="450">
+            <StackPanel>
+                <Menu Background="White" HorizontalAlignment="Center">
+                    <MenuItem x:Name="mMain" Header="Главная" Style="{StaticResource m_main}"/>
+                    <MenuItem x:Name="mSuarch" Header="Поиск" Style="{StaticResource m_main}"/>
+                    <MenuItem x:Name="mOther" Header="Прочее" Style="{StaticResource m_withDown}">
+                        <MenuItem x:Name="mAdd" Header="Добавить пользователя" Style="{StaticResource m_dop}"/>
+                        <MenuItem x:Name="mDel" Header="Удалить пользователя" Style="{StaticResource m_dop}"/>
+                        <MenuItem x:Name="mNew" Header="Заявка на технику" Style="{StaticResource m_dop}"/>
+                    </MenuItem>
+                    <MenuItem MinWidth="240" IsEnabled="False"/>
+                    <MenuItem x:Name="mUserProfile" Header="" Style="{StaticResource m_userWithDown}">
+                        <MenuItem.Icon>
+                            <Image Source="/picture/ic_account_blue.png" Stretch="Uniform" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </Menu>
+                <Grid Height="420">
+                    <TabControl Style="{StaticResource tbc_RoundedTabControlStyle}" >
+                        <TabItem Header="Новое" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                            <Label>
+                                <ListBox x:Name="name" Background="Transparent" BorderThickness="0" Width="775" Height="420">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Width="759">
+                                                <Rectangle Fill="#D9D9D9" Opacity="0.15" RadiusX="10" RadiusY="10"/>
+                                                <TextBlock x:Name="aId" Text="id" Visibility="Collapsed"/>
+                                                <StackPanel Margin="7" Orientation="Vertical">
+                                                    <Grid Margin="0 0 0 15">
+                                                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                                                            <TextBlock x:Name="aNum" Text="Номер рабочего места" Foreground="#0E498B"/>
+                                                            <TextBlock x:Name="aName" Text="ФИО работника" FontSize="10" Foreground="#0E498B"/>
+                                                        </StackPanel>
+                                                        <TextBlock x:Name="aStatus" Text="Статус заявки" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#0E498B"/>
+                                                    </Grid>
+                                                    <TextBlock x:Name="aDate" Text="Дата" FontSize="13" Margin="0 0 0 5" Foreground="#0E498B"/>
+                                                    <TextBlock x:Name="aDescription" FontSize="10" TextWrapping="Wrap" Foreground="#0E498B" Text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+                                                    <Button x:Name="aBtn" Content="Подробнее" FontSize="10" Width="100" Margin="5 10 5 0" HorizontalAlignment="Right" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                                                </StackPanel>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </Label>
+                        </TabItem>
+                        <TabItem Header="В процессе" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                            <Label>
+                                <ListBox x:Name="bname" Background="Transparent" BorderThickness="0" Width="775" Height="420">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Width="759">
+                                                <Rectangle Fill="#D9D9D9" Opacity="0.15" RadiusX="10" RadiusY="10"/>
+                                                <TextBlock x:Name="bId" Text="id" Visibility="Collapsed"/>
+                                                <StackPanel Margin="7" Orientation="Vertical">
+                                                    <Grid Margin="0 0 0 15">
+                                                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                                                            <TextBlock x:Name="bNum" Text="Номер рабочего места" Foreground="#0E498B"/>
+                                                            <TextBlock x:Name="bName" Text="ФИО работника" FontSize="10" Foreground="#0E498B"/>
+                                                        </StackPanel>
+                                                        <TextBlock x:Name="aStatus" Text="Статус заявки" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#0E498B"/>
+                                                    </Grid>
+                                                    <TextBlock x:Name="bDate" Text="Дата" FontSize="13" Margin="0 0 0 5" Foreground="#0E498B"/>
+                                                    <TextBlock x:Name="bDescription" FontSize="10" TextWrapping="Wrap" Foreground="#0E498B" Text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+                                                    <Button x:Name="bBtn"  Content="Подробнее" FontSize="10" Width="100" Margin="5 10 5 0" HorizontalAlignment="Right" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                                                </StackPanel>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </Label>
+                        </TabItem>
+                        <TabItem Header="Исполненные" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                            <Label>
+                                <ListBox x:Name="cname" Background="Transparent" BorderThickness="0" Width="775" Height="420">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Width="759">
+                                                <Rectangle Fill="#D9D9D9" Opacity="0.15" RadiusX="10" RadiusY="10"/>
+                                                <TextBlock x:Name="cId" Text="id" Visibility="Collapsed"/>
+                                                <StackPanel Margin="7" Orientation="Vertical">
+                                                    <Grid Margin="0 0 0 15">
+                                                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                                                            <TextBlock x:Name="cNum" Text="Номер рабочего места" Foreground="#0E498B"/>
+                                                            <TextBlock x:Name="cName" Text="ФИО работника" FontSize="10" Foreground="#0E498B"/>
+                                                        </StackPanel>
+                                                        <TextBlock x:Name="cStatus" Text="Статус заявки" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#0E498B"/>
+                                                    </Grid>
+                                                    <TextBlock x:Name="cDate" Text="Дата" FontSize="13" Margin="0 0 0 5" Foreground="#0E498B"/>
+                                                    <TextBlock x:Name="cDescription" FontSize="10" TextWrapping="Wrap" Foreground="#0E498B" Text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+                                                    <Button  Content="Подробнее" FontSize="10" Width="100" Margin="5 10 5 0" HorizontalAlignment="Right" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                                                </StackPanel>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </Label>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Viewbox>
 </Page>
