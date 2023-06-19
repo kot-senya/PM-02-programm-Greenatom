@@ -26,7 +26,7 @@ namespace HelpAct
             try
             {
                 InitializeComponent();
-                contentFrame.Content = new Autorization();
+                contentFrame.Content = new uUserMainPage();
             }
             catch (Exception ex)
             {

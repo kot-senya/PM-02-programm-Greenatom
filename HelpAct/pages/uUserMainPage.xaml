@@ -1,14 +1,54 @@
 ﻿<Page x:Class="HelpAct.uUserMainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HelpAct"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="uUserMainPage">
+      Title="uUserMainPage" Background="#0E498B">
 
-    <Grid>
-        
-    </Grid>
+    <Border CornerRadius="10"
+              BorderThickness="1"
+              Opacity="0.95">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="2,0" EndPoint="2,1">
+                <GradientStop Color="#73D951" Offset="0"></GradientStop>
+                <GradientStop Color="#D63C3C" Offset="0.5"></GradientStop>
+                <GradientStop Color="#14365A" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!--Меню-->
+                <ColumnDefinition Width="250"/>
+                <!--Контент-->
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border CornerRadius="10,0,0,10"
+                    Grid.Column="0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="2,0" EndPoint="2,1.7">
+                        <GradientStop Color="#11529A" Offset="0"></GradientStop>
+                        <GradientStop Color="#0E498B" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <Border CornerRadius="10,0,0,10"
+                    Grid.Column="1">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="2,0" EndPoint="0,0">
+                        <GradientStop Color="#11529A" Offset="0"></GradientStop>
+                        <GradientStop Color="#0E498B" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+
+        </Grid>
+    </Border>
+   
 </Page>
