@@ -72,6 +72,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="pages\formUserSupportAddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\formUserSupportDeleteUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\formUserSupportRequest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\uITactivCreativAct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -81,6 +93,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="pages\uITactivPersonalAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\uITactivSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,10 +113,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="pages\uUserSapportPersonalAccount.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="pages\uUserSapportRequestForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,6 +145,15 @@
     <Compile Include="pages\Autorization.xaml.cs">
       <DependentUpon>Autorization.xaml</DependentUpon>
     </Compile>
+    <Compile Include="pages\formUserSupportAddUser.xaml.cs">
+      <DependentUpon>formUserSupportAddUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\formUserSupportDeleteUser.xaml.cs">
+      <DependentUpon>formUserSupportDeleteUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\formUserSupportRequest.xaml.cs">
+      <DependentUpon>formUserSupportRequest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\uITactivCreativAct.xaml.cs">
       <DependentUpon>uITactivCreativAct.xaml</DependentUpon>
     </Compile>
@@ -141,6 +162,9 @@
     </Compile>
     <Compile Include="pages\uITactivPersonalAccount.xaml.cs">
       <DependentUpon>uITactivPersonalAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\uITactivSearch.xaml.cs">
+      <DependentUpon>uITactivSearch.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\uUserMainPage.xaml.cs">
       <DependentUpon>uUserMainPage.xaml</DependentUpon>
@@ -153,9 +177,6 @@
     </Compile>
     <Compile Include="pages\uUserSapportPersonalAccount.xaml.cs">
       <DependentUpon>uUserSapportPersonalAccount.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="pages\uUserSapportRequestForm.xaml.cs">
-      <DependentUpon>uUserSapportRequestForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\uUserSapportSearch.xaml.cs">
       <DependentUpon>uUserSapportSearch.xaml</DependentUpon>

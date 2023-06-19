@@ -12,15 +12,15 @@
         <Border Width="800" Height="450">
             <StackPanel>
                 <Menu Background="White" HorizontalAlignment="Center">
-                    <MenuItem x:Name="mMain" Header="Главная" Style="{StaticResource m_main}"/>
-                    <MenuItem x:Name="mSuarch" Header="Поиск" Style="{StaticResource m_main}"/>
-                    <MenuItem x:Name="mOther" Header="Прочее" Style="{StaticResource m_withDown}">
-                        <MenuItem x:Name="mAdd" Header="Добавить пользователя" Style="{StaticResource m_dop}"/>
-                        <MenuItem x:Name="mDel" Header="Удалить пользователя" Style="{StaticResource m_dop}"/>
-                        <MenuItem x:Name="mNew" Header="Заявка на технику" Style="{StaticResource m_dop}"/>
+                    <MenuItem Header="Главная" Style="{StaticResource m_main}"/>
+                    <MenuItem x:Name="mSuarch" Click="mSuarch_Click" Header="Поиск" Style="{StaticResource m_main}"/>
+                    <MenuItem Header="Прочее" Style="{StaticResource m_withDown}">
+                        <MenuItem x:Name="mAdd" Click="mAdd_Click" Header="Добавить пользователя" Style="{StaticResource m_dop}"/>
+                        <MenuItem x:Name="mDel" Click="mDel_Click" Header="Удалить пользователя" Style="{StaticResource m_dop}"/>
+                        <MenuItem x:Name="mNew" Click="mNew_Click" Header="Заявка на технику" Style="{StaticResource m_dop}"/>
                     </MenuItem>
                     <MenuItem MinWidth="240" IsEnabled="False"/>
-                    <MenuItem x:Name="mUserProfile" Header="" Style="{StaticResource m_userWithDown}">
+                    <MenuItem x:Name="mUserProfile" Click="mUserProfile_Click" Header="" Style="{StaticResource m_userWithDown}">
                         <MenuItem.Icon>
                             <Image Source="/picture/ic_account_blue.png" Stretch="Uniform" />
                         </MenuItem.Icon>

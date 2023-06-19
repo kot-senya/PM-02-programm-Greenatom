@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace HelpAct
 {
     /// <summary>
-    /// Логика взаимодействия для uUserSapportRequestForm.xaml
+    /// Логика взаимодействия для formUserSupportAddUser.xaml
     /// </summary>
-    public partial class uUserSapportRequestForm : Page
+    public partial class formUserSupportAddUser : Window
     {
-        public uUserSapportRequestForm()
+        public formUserSupportAddUser()
         {
             InitializeComponent();
         }
