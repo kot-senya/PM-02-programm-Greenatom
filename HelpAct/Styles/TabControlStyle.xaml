@@ -21,10 +21,12 @@
                                   Background="Transparent" />
                         <Border x:Name="Border" 
                                 Grid.Row="1" 
-                                BorderThickness="2" 
+                                BorderThickness="1" 
                                 CornerRadius="5" 
                                 BorderBrush="#0E498B" 
-                                Margin="5"/>
+                                Margin="5">
+                        <ContentPresenter ContentSource="SelectedContent"></ContentPresenter>    
+                        </Border>                        
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -32,15 +34,17 @@
     </Style>
     
     <Style x:Key="tbi_RoundedTabItemStyle" TargetType="{x:Type TabItem}">
+        <Setter Property="FontFamily" Value="Gabriela"/>
+        <Setter Property="FontSize" Value="15"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TabItem">
-                    <Border Name="Border" 
+                    <Border Name="Border"                             
                             BorderThickness="1" 
                             BorderBrush="#D9D9D9" 
                             CornerRadius="5" 
                             Margin="2">
-                        <ContentPresenter x:Name="ContentSite" 
+                        <ContentPresenter x:Name="ContentSite"                                          
                                           VerticalAlignment="Center" 
                                           HorizontalAlignment="Center" 
                                           ContentSource="Header" 
@@ -56,8 +60,7 @@
                             <Setter TargetName="Border" Property="Background" Value="white" />
                             <Setter Property="Foreground" Value="#0E498B"/>
                         </Trigger>
-                    </ControlTemplate.Triggers>                    
-                    
+                    </ControlTemplate.Triggers>   
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

@@ -19,7 +19,7 @@
         <Setter Property="Background" Value="#0E498B"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="FontFamily" Value="{StaticResource Gabriela}"/>
+        <Setter Property="FontFamily" Value="Gabriela"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Cursor" Value="Hand"/>        
