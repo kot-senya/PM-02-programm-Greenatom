@@ -5,8 +5,8 @@
     <ImageBrush x:Key="ib_People_grey" ImageSource="/picture/ic_user_grey.png"/>
     
     <Style x:Key="tbox_Login" TargetType="{x:Type TextBox}">
-        <Setter Property="FontSize" Value="11"/>
-        <Setter Property="FontFamily" Value="Roboto"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontFamily" Value="{StaticResource Forum}"/>
         <Setter Property="Height" Value="Auto"/>
         <Setter Property="Width" Value="Auto"/>
         <Setter Property="Background" Value="white"/>
@@ -28,7 +28,7 @@
                             SnapsToDevicePixels="True">
                         <Grid Margin="{TemplateBinding Padding}">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="30"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <ScrollViewer x:Name="PART_ContentHost"
@@ -40,8 +40,8 @@
                             <Border x:Name="ic"
                                     Background="{StaticResource ib_People_grey}"
                                     BorderThickness="0"
-                                    Height="17"
-                                    Width="17"
+                                    Height="25"
+                                    Width="25"
                                     Margin="5 0 0 3"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
@@ -49,6 +49,8 @@
                                     Cursor="Arrow"
                                     Grid.Column="0"/>
                             <Label x:Name="Watermark"
+                                   FontFamily="{StaticResource Gabriela}"
+                                   FontSize="15"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Left"
                                    Foreground="#D9D9D9"
