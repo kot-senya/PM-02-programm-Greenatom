@@ -29,5 +29,20 @@ namespace HelpAct
         {
             NavigationService.Navigate(new uITactivPersonalAccount());
         }
+
+        private void mSuarch_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new uITactivSearch());
+        }
+
+        private void mAdd_Click(object sender, RoutedEventArgs e)
+        {
+            new formITactivAddTechnic().ShowDialog();
+        }
+
+        private void mDel_Click(object sender, RoutedEventArgs e)
+        {
+            new formITactivDeleteTechnic().ShowDialog();
+        }
     }
 }
