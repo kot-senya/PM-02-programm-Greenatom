@@ -26,7 +26,7 @@
                     </MenuItem>
                 </Menu>
                 <Grid Height="420">
-
+                    <TextBox Style="{StaticResource  tbox_Search}" Width="200" Tag="Поиск"/>
                 </Grid>
             </StackPanel>
         </Border>
