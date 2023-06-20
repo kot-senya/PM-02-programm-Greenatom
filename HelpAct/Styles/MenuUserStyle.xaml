@@ -3,6 +3,11 @@
 
     <SolidColorBrush x:Key="colors" Color="#73D951"/>
     <ImageBrush x:Key="ib_Exit_grey" ImageSource="/picture/ic_exit_grey.png"/>
+    <ImageBrush x:Key="ib_Home_grey" ImageSource="/picture/ic_home_grey.png"/>
+    <ImageBrush x:Key="ib_Request_grey" ImageSource="/picture/ic_request_grey.png"/>
+    <ImageBrush x:Key="ib_AllRequest_grey" ImageSource="/picture/ic_all_request_grey.png"/>
+
+
 
     <Style x:Key="menuButton_User" TargetType="{x:Type RadioButton}">
         <Setter Property="Height" Value="50"/>
@@ -133,4 +138,179 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
+    <Style x:Key="menuButton_Home" TargetType="{x:Type RadioButton}">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Margin" Value="15,0,0,5"/>
+        <Setter Property="Padding" Value="0 5 5 4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontFamily" Value="Gabriela"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="border" 
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="4,0,0,0"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            SnapsToDevicePixels="True">
+                        <Grid Margin="{TemplateBinding Padding}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="ic"
+                                    Background="{StaticResource ib_Home_grey}"
+                                    BorderThickness="0"
+                                    Height="25"
+                                    Width="25"
+                                    Margin="5 0 0 3"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Grid.Column="0"/>
+                            <Label x:Name="Text"
+                                   FontFamily="Gabriela"
+                                   FontSize="15"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   Foreground="white"
+                                   Padding="5 0 20 0"
+                                   Content="{TemplateBinding Content}"
+                                   Grid.Column="1"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Margin" Value="0,0,0,5"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Background" Value="#283CAECC"/>
+                            <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="menuButton_Request" TargetType="{x:Type RadioButton}">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Margin" Value="15,0,0,5"/>
+        <Setter Property="Padding" Value="0 5 5 4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontFamily" Value="Gabriela"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="border" 
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="4,0,0,0"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            SnapsToDevicePixels="True">
+                        <Grid Margin="{TemplateBinding Padding}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="ic"
+                                    Background="{StaticResource ib_Request_grey}"
+                                    BorderThickness="0"
+                                    Height="25"
+                                    Width="25"
+                                    Margin="5 0 0 3"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Grid.Column="0"/>
+                            <Label x:Name="Text"
+                                   FontFamily="Gabriela"
+                                   FontSize="15"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   Foreground="white"
+                                   Padding="5 0 20 0"
+                                   Content="{TemplateBinding Content}"
+                                   Grid.Column="1"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Margin" Value="0,0,0,5"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Background" Value="#283CAECC"/>
+                            <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="menuButton_AllRequest" TargetType="{x:Type RadioButton}">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Margin" Value="15,0,0,5"/>
+        <Setter Property="Padding" Value="0 5 5 4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontFamily" Value="Gabriela"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="border" 
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="4,0,0,0"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            SnapsToDevicePixels="True">
+                        <Grid Margin="{TemplateBinding Padding}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="ic"
+                                    Background="{StaticResource ib_AllRequest_grey}"
+                                    BorderThickness="0"
+                                    Height="25"
+                                    Width="25"
+                                    Margin="5 0 0 3"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Grid.Column="0"/>
+                            <Label x:Name="Text"
+                                   FontFamily="Gabriela"
+                                   FontSize="15"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   Foreground="white"
+                                   Padding="5 0 20 0"
+                                   Content="{TemplateBinding Content}"
+                                   Grid.Column="1"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Margin" Value="0,0,0,5"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Background" Value="#283CAECC"/>
+                            <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

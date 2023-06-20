@@ -269,5 +269,17 @@
   <ItemGroup>
     <Resource Include="picture\ic_exit_grey.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\pik_cat_off.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\ic_home_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\ic_request_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\ic_all_request_grey.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

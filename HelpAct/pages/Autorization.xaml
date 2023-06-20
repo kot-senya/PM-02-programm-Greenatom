@@ -15,7 +15,7 @@
             RenderingBias="Performance" ShadowDepth="60" />
             </Border.Effect>
             <StackPanel>
-                <TextBlock Text="Авторизируйтесь" FontSize="26" HorizontalAlignment="Center" Foreground="#000000" Margin="0 30 0 0" RenderTransformOrigin="0.492,0.62" FontFamily="{StaticResource Gabriela}"/>
+                <TextBlock Text="Авторизируйтесь" FontSize="26" HorizontalAlignment="Center" Foreground="#0E3969" Margin="0 30 0 0" RenderTransformOrigin="0.492,0.62" FontFamily="{StaticResource Gabriela}"/>
                 <TextBox x:Name="aLogin" Tag="Логин" Width="289" Height="50" Text="" Style="{StaticResource  tbox_Login}"  Margin="25 46 24 0"/>
                 <PasswordBox x:Name="aPass" Password="" Tag="Пароль" Width="289" FontSize="18" Height="50" Style="{StaticResource pbox_Password}" Margin="25 45 24 0" Cursor="IBeam"/>
                 <Button x:Name="bAuth" Width="222" Height="38" Margin="0 43 0 0" Click="bAuth_Click" Content="Вход" FontSize="20" Style="{StaticResource btn_RoundedButtonStyle}"/>

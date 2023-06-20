@@ -59,10 +59,10 @@
 
                     <!--Менюшка-->
                     <StackPanel>
-                        <RadioButton x:Name="mMain" Click="mMain_Click" Style="{StaticResource menuButton_User}" Content="Главная" Tag ="{StaticResource colors}"/>
+                        <RadioButton x:Name="mMain" Click="mMain_Click" Style="{StaticResource menuButton_Home}" Content="Главная" Tag ="{StaticResource colors}"/>
                         <RadioButton x:Name="mUserProfile" Click="mUserProfile_Click" Style="{StaticResource menuButton_User}" Content="Личный кабинет" Tag ="{StaticResource colors}"/>
-                        <RadioButton x:Name="mAddRequest" Click="mAddRequest_Click" Style="{StaticResource menuButton_User}" Content="Создать заявку" Tag ="{StaticResource colors}"/>
-                        <RadioButton x:Name="mFullRequest" Click="mFullRequest_Click" Style="{StaticResource menuButton_User}" Content="Выполненные заявки" Tag ="{StaticResource colors}"/>
+                        <RadioButton x:Name="mAddRequest" Click="mAddRequest_Click" Style="{StaticResource menuButton_Request}" Content="Создать заявку" Tag ="{StaticResource colors}"/>
+                        <RadioButton x:Name="mFullRequest" Click="mAllRequest_Click" Style="{StaticResource menuButton_AllRequest}" Content="Выполненные заявки" Tag ="{StaticResource colors}"/>
                     </StackPanel>
 
                 </StackPanel>
@@ -71,15 +71,24 @@
             </Grid>
 
             <Grid Grid.Column="1" Visibility="Visible" x:Name="pageMain">
-                <Button Content="1 страница"/>
+                <Button Content="1 страница" Click="Button_Click"/>
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="170" Width="128" Margin="30,-213,0,0">
+
+
+                </Grid>
+                <Grid>
+                    
+                </Grid>
             </Grid>
             <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageUserProfile">
                 <Button Content="2 страница"/>
+
             </Grid>
             <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageAddRequest">
                 <Button Content="3 страница"/>
+                <Image Source="pack://application:,,,/picture/pik_cat_off.jpg"/>
             </Grid>
-            <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageFullRequest">
+            <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageAllRequest">
                 <Button Content="4 страница"/>
             </Grid>
         </Grid>

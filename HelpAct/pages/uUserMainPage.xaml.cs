@@ -30,7 +30,7 @@ namespace HelpAct
             pageMain.Visibility = Visibility.Hidden;
             pageUserProfile.Visibility = Visibility.Hidden;
             pageAddRequest.Visibility = Visibility.Hidden;
-            pageFullRequest.Visibility = Visibility.Hidden;
+            pageAllRequest.Visibility = Visibility.Hidden;
         }
         private void mMain_Click(object sender, RoutedEventArgs e)
         {
@@ -50,15 +50,20 @@ namespace HelpAct
             pageAddRequest.Visibility = Visibility.Visible;
         }
 
-        private void mFullRequest_Click(object sender, RoutedEventArgs e)
+        private void mAllRequest_Click(object sender, RoutedEventArgs e)
         {
             fullNullVisibility();
-            pageFullRequest.Visibility = Visibility.Visible;
+            pageAllRequest.Visibility = Visibility.Visible;
         }
 
         private void mExit_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Autorization());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
