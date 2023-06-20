@@ -247,5 +247,14 @@
     <Resource Include="picture\ic_down.png" />
     <Resource Include="picture\ic_search_blue.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\ic_bt_close_blue.png" />
+    <Resource Include="picture\ic_bt_close_grey.png" />
+    <Resource Include="picture\ic_logo_corp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\ic_logo_blue.png" />
+    <Resource Include="picture\ic_logo_grey.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
