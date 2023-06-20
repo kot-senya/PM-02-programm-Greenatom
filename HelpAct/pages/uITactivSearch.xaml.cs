@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace HelpAct
 {
     /// <summary>
-    /// Логика взаимодействия для uUserSapportRequestForm.xaml
+    /// Логика взаимодействия для uITactivSearch.xaml
     /// </summary>
-    public partial class uUserSapportRequestForm : Page
+    public partial class uITactivSearch : Page
     {
-        public uUserSapportRequestForm()
+        public uITactivSearch()
         {
             InitializeComponent();
         }

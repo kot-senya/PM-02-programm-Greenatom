@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace HelpAct
 {
     /// <summary>
-    /// Логика взаимодействия для uITactivMainPage.xaml
+    /// Логика взаимодействия для formUserSupportDeleteUser.xaml
     /// </summary>
-    public partial class uITactivMainPage : Page
+    public partial class formUserSupportDeleteUser : Window
     {
-        public uITactivMainPage()
+        public formUserSupportDeleteUser()
         {
             InitializeComponent();
-        }
-
-        private void mUserProfile_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new uITactivPersonalAccount());
         }
     }
 }

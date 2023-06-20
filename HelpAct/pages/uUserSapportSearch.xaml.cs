@@ -24,5 +24,30 @@ namespace HelpAct
         {
             InitializeComponent();
         }
+
+        private void mMain_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new uUserSapportMainPage());
+        }
+
+        private void mAdd_Click(object sender, RoutedEventArgs e)
+        {
+            new formUserSupportAddUser().ShowDialog();
+        }
+
+        private void mDel_Click(object sender, RoutedEventArgs e)
+        {
+            new formUserSupportDeleteUser().ShowDialog();
+        }
+
+        private void mNew_Click(object sender, RoutedEventArgs e)
+        {
+            new formUserSupportRequest().ShowDialog();
+        }
+
+        private void mUserProfile_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new uUserSapportPersonalAccount());
+        }
     }
 }

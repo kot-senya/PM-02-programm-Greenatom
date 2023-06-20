@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace HelpAct
 {
     /// <summary>
-    /// Логика взаимодействия для uITactivMainPage.xaml
+    /// Логика взаимодействия для formUserSupportRequest.xaml
     /// </summary>
-    public partial class uITactivMainPage : Page
+    public partial class formUserSupportRequest : Window
     {
-        public uITactivMainPage()
+        public formUserSupportRequest()
         {
             InitializeComponent();
-        }
-
-        private void mUserProfile_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new uITactivPersonalAccount());
         }
     }
 }
