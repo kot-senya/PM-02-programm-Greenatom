@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Net;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -15,9 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO;
-using System.Drawing.Text;
-using System.Drawing;
 
 namespace HelpAct
 {
@@ -29,10 +24,9 @@ namespace HelpAct
         public MainWindow()
         {
             try
-            {                
+            {
                 InitializeComponent();
-
-                contentFrame.Content = new uITactivMainPage();
+                contentFrame.Content = new uUserMainPage();
             }
             catch (Exception ex)
             {
