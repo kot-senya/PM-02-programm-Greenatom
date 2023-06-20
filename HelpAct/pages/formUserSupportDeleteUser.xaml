@@ -5,6 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelpAct"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Icon="pack://application:,,,/picture/ic_logo_corp.png"
         Title="formUserSupportDeleteUser" Height="450" Width="800">
     <Grid>
         

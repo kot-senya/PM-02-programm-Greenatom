@@ -20,6 +20,7 @@
 
             <FontFamily x:Key="Forum">fonts/#Forum</FontFamily>
             <FontFamily x:Key="Gabriela">fonts/#Gabriela</FontFamily>
+
             
         </ResourceDictionary>
         

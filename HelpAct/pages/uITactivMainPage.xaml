@@ -16,11 +16,11 @@
         <Border Width="800" Height="450">
             <StackPanel>
                 <Menu Background="White" HorizontalAlignment="Center">
-                    <MenuItem x:Name="mMain" Header="Главная" Style="{StaticResource m_main}"/>
-                    <MenuItem x:Name="mSuarch" Header="Поиск" Style="{StaticResource m_main}"/>
-                    <MenuItem x:Name="mOther" Header="Прочее" Style="{StaticResource m_withDown}">
-                        <MenuItem x:Name="mAdd" Header="Поступление" Style="{StaticResource m_dop}"/>
-                        <MenuItem x:Name="mDel" Header="Списание" Style="{StaticResource m_dop}"/>
+                    <MenuItem Header="Главная" Style="{StaticResource m_main}"/>
+                    <MenuItem x:Name="mSuarch" Click="mSuarch_Click" Header="Поиск" Style="{StaticResource m_main}"/>
+                    <MenuItem Header="Прочее" Style="{StaticResource m_withDown}">
+                        <MenuItem x:Name="mAdd" Click="mAdd_Click" Header="Поступление" Style="{StaticResource m_dop}"/>
+                        <MenuItem x:Name="mDel" Click="mDel_Click" Header="Списание" Style="{StaticResource m_dop}"/>
                     </MenuItem>
                     <MenuItem MinWidth="240" IsEnabled="False"/>
                     <MenuItem x:Name="mUserProfile" Click="mUserProfile_Click" Header="" Style="{StaticResource m_userWithDown}">
@@ -42,13 +42,13 @@
                                                 <StackPanel Margin="7" Orientation="Vertical">
                                                     <Grid Margin="0 0 0 15">
                                                         <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
-                                                            <TextBlock x:Name="aNum" Text="Номер рабочего места" Foreground="#0E498B"/>
-                                                            <TextBlock x:Name="aName" Text="ФИО работника" FontSize="10" Foreground="#0E498B"/>
+                                                            <TextBlock x:Name="aNum" Text="Номер рабочего места" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B"/>
+                                                            <TextBlock x:Name="aName" Text="ФИО работника" FontSize="10" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B"/>
                                                         </StackPanel>
                                                         <TextBlock x:Name="aStatus" Text="Статус заявки" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#0E498B"/>
                                                     </Grid>
-                                                    <TextBlock x:Name="aDate" Text="Дата" FontSize="13" Margin="0 0 0 5" Foreground="#0E498B"/>
-                                                    <TextBlock x:Name="aDescription" FontSize="10" TextWrapping="Wrap" Foreground="#0E498B" Text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+                                                    <TextBlock x:Name="aDate" Text="Дата" FontSize="13" Margin="0 0 0 5" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B"/>
+                                                    <TextBlock x:Name="aDescription" FontSize="10" TextWrapping="Wrap" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B" Text="Описание"/>
                                                     <Button x:Name="aBtn" Content="Подробнее" FontSize="10" Width="100" Margin="5 10 5 0" HorizontalAlignment="Right" Style="{StaticResource btn_RoundedButtonStyle}"/>
                                                 </StackPanel>
                                             </Grid>
@@ -68,13 +68,13 @@
                                                 <StackPanel Margin="7" Orientation="Vertical">
                                                     <Grid Margin="0 0 0 15">
                                                         <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
-                                                            <TextBlock x:Name="bNum" Text="Номер рабочего места" Foreground="#0E498B"/>
-                                                            <TextBlock x:Name="bName" Text="ФИО работника" FontSize="10" Foreground="#0E498B"/>
+                                                            <TextBlock x:Name="bNum" Text="Номер рабочего места" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B"/>
+                                                            <TextBlock x:Name="bName" Text="ФИО работника" FontSize="10" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B"/>
                                                         </StackPanel>
-                                                        <TextBlock x:Name="aStatus" Text="Статус заявки" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#0E498B"/>
+                                                        <TextBlock x:Name="aStatus" Text="Статус заявки" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B"/>
                                                     </Grid>
                                                     <TextBlock x:Name="bDate" Text="Дата" FontSize="13" Margin="0 0 0 5" Foreground="#0E498B"/>
-                                                    <TextBlock x:Name="bDescription" FontSize="10" TextWrapping="Wrap" Foreground="#0E498B" Text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+                                                    <TextBlock x:Name="bDescription" FontSize="10" TextWrapping="Wrap" Foreground="#0E498B" FontFamily="{StaticResource Gabriela}" Text="Описание"/>
                                                     <Button x:Name="bBtn"  Content="Подробнее" FontSize="10" Width="100" Margin="5 10 5 0" HorizontalAlignment="Right" Style="{StaticResource btn_RoundedButtonStyle}"/>
                                                 </StackPanel>
                                             </Grid>
@@ -94,13 +94,13 @@
                                                 <StackPanel Margin="7" Orientation="Vertical">
                                                     <Grid Margin="0 0 0 15">
                                                         <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
-                                                            <TextBlock x:Name="cNum" Text="Номер рабочего места" Foreground="#0E498B"/>
-                                                            <TextBlock x:Name="cName" Text="ФИО работника" FontSize="10" Foreground="#0E498B"/>
+                                                            <TextBlock x:Name="cNum" Text="Номер рабочего места" Foreground="#0E498B" FontFamily="{StaticResource Gabriela}"/>
+                                                            <TextBlock x:Name="cName" Text="ФИО работника" FontSize="10" Foreground="#0E498B" FontFamily="{StaticResource Gabriela}"/>
                                                         </StackPanel>
-                                                        <TextBlock x:Name="cStatus" Text="Статус заявки" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#0E498B"/>
+                                                        <TextBlock x:Name="cStatus" Text="Статус заявки" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#0E498B" FontFamily="{StaticResource Gabriela}"/>
                                                     </Grid>
                                                     <TextBlock x:Name="cDate" Text="Дата" FontSize="13" Margin="0 0 0 5" Foreground="#0E498B"/>
-                                                    <TextBlock x:Name="cDescription" FontSize="10" TextWrapping="Wrap" Foreground="#0E498B" Text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+                                                    <TextBlock x:Name="cDescription" FontSize="10" TextWrapping="Wrap" Foreground="#0E498B" FontFamily="{StaticResource Gabriela}" Text="Описание"/>
                                                     <Button  Content="Подробнее" FontSize="10" Width="100" Margin="5 10 5 0" HorizontalAlignment="Right" Style="{StaticResource btn_RoundedButtonStyle}"/>
                                                 </StackPanel>
                                             </Grid>

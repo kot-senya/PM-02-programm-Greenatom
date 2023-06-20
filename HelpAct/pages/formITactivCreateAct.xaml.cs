@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace HelpAct
 {
     /// <summary>
-    /// Логика взаимодействия для uITactivCreativAct.xaml
+    /// Логика взаимодействия для formITactivCreateAct.xaml
     /// </summary>
-    public partial class uITactivCreativAct : Page
+    public partial class formITactivCreateAct : Window
     {
-        public uITactivCreativAct()
+        public formITactivCreateAct()
         {
             InitializeComponent();
         }

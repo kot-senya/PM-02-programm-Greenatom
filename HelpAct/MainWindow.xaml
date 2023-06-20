@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelpAct"
         mc:Ignorable="d"
+        Icon="pack://application:,,,/picture/ic_logo_corp.png"
         Title="MainWindow" MinHeight="450" MinWidth="800">
     <Frame x:Name="contentFrame" NavigationUIVisibility="Hidden"/>
 </Window>
