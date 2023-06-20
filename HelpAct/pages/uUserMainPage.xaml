@@ -27,28 +27,41 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Border CornerRadius="10,0,0,10"
-                    Grid.Column="0">
+            <Border Grid.Column="0">
                 <Border.Background>
-                    <LinearGradientBrush StartPoint="2,0" EndPoint="2,1.7">
-                        <GradientStop Color="#11529A" Offset="0"></GradientStop>
-                        <GradientStop Color="#0E498B" Offset="1"></GradientStop>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#ffffff" Offset="1.79"></GradientStop>
+                        <GradientStop Color="#0E498B" Offset="0.71"></GradientStop>
+                        <GradientStop Color="#14365A" Offset="0.43"></GradientStop>
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
 
-            <Border CornerRadius="10,0,0,10"
-                    Grid.Column="1">
+            <Border Grid.Column="1">
                 <Border.Background>
-                    <LinearGradientBrush StartPoint="2,0" EndPoint="0,0">
-                        <GradientStop Color="#11529A" Offset="0"></GradientStop>
-                        <GradientStop Color="#0E498B" Offset="1"></GradientStop>
+                    <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
+                        <GradientStop Color="#ffffff" Offset="0"></GradientStop>
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal"
+                    Height="35"
+                    Margin="15,25,0,40">
+                    <!--<Imeg-->
 
+                </StackPanel>
+
+                <!--Менюшка-->
+                <StackPanel>
+                    <RadioButton Style="{StaticResource menuButton_User}" Content="Изменение" Tag ="{StaticResource colors}"/>
+                    <RadioButton Style="{StaticResource menuButton_User}" Content="Создать заявку" Tag ="{StaticResource colors}"/>
+                    <RadioButton Style="{StaticResource menuButton_User}" Content="Выполненные заявки" Tag ="{StaticResource colors}"/>
+                </StackPanel>
+                <RadioButton Style="{StaticResource menuButton_Exit}" Content="Выход" Tag ="{StaticResource colors}" VerticalAlignment="Bottom"/>
+            </StackPanel>
 
         </Grid>
     </Border>
-   
+
 </Page>
