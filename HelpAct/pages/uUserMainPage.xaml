@@ -44,23 +44,44 @@
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
-            <StackPanel>
-                <StackPanel Orientation="Horizontal"
-                    Height="35"
-                    Margin="15,25,0,40">
-                    <!--<Imeg-->
-
-                </StackPanel>
-
-                <!--Менюшка-->
+            <Grid>
                 <StackPanel>
-                    <RadioButton Style="{StaticResource menuButton_User}" Content="Изменение" Tag ="{StaticResource colors}"/>
-                    <RadioButton Style="{StaticResource menuButton_User}" Content="Создать заявку" Tag ="{StaticResource colors}"/>
-                    <RadioButton Style="{StaticResource menuButton_User}" Content="Выполненные заявки" Tag ="{StaticResource colors}"/>
-                </StackPanel>
-                <RadioButton Style="{StaticResource menuButton_Exit}" Content="Выход" Tag ="{StaticResource colors}" VerticalAlignment="Bottom"/>
-            </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                    Height="50"
+                                    Margin="15,25,0,40">
+                        <Image Source="/picture/ic_logo_grey.png"/>
+                        <StackPanel Orientation="Vertical" Margin="10 0 0 0">
+                            <TextBlock Text="Гринатом" Foreground="white" FontFamily="{StaticResource Gabriela}" FontSize="25" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Росатом" Foreground="white" FontFamily="{StaticResource Gabriela}" FontSize="15" HorizontalAlignment="Center"/>
+                        </StackPanel>
 
+                    </StackPanel>
+
+                    <!--Менюшка-->
+                    <StackPanel>
+                        <RadioButton x:Name="mMain" Click="mMain_Click" Style="{StaticResource menuButton_User}" Content="Главная" Tag ="{StaticResource colors}"/>
+                        <RadioButton x:Name="mUserProfile" Click="mUserProfile_Click" Style="{StaticResource menuButton_User}" Content="Личный кабинет" Tag ="{StaticResource colors}"/>
+                        <RadioButton x:Name="mAddRequest" Click="mAddRequest_Click" Style="{StaticResource menuButton_User}" Content="Создать заявку" Tag ="{StaticResource colors}"/>
+                        <RadioButton x:Name="mFullRequest" Click="mFullRequest_Click" Style="{StaticResource menuButton_User}" Content="Выполненные заявки" Tag ="{StaticResource colors}"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+                <RadioButton x:Name="mExit" Click="mExit_Click" Style="{StaticResource menuButton_Exit}" Content="Выход" Tag ="{StaticResource colors}" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="1" Visibility="Visible" x:Name="pageMain">
+                <Button Content="1 страница"/>
+            </Grid>
+            <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageUserProfile">
+                <Button Content="2 страница"/>
+            </Grid>
+            <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageAddRequest">
+                <Button Content="3 страница"/>
+            </Grid>
+            <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageFullRequest">
+                <Button Content="4 страница"/>
+            </Grid>
         </Grid>
     </Border>
 

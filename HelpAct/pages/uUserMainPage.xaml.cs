@@ -25,5 +25,40 @@ namespace HelpAct
         {
             InitializeComponent();
         }
+        private void fullNullVisibility()
+        {
+            pageMain.Visibility = Visibility.Hidden;
+            pageUserProfile.Visibility = Visibility.Hidden;
+            pageAddRequest.Visibility = Visibility.Hidden;
+            pageFullRequest.Visibility = Visibility.Hidden;
+        }
+        private void mMain_Click(object sender, RoutedEventArgs e)
+        {
+            fullNullVisibility();
+            pageMain.Visibility = Visibility.Visible;
+        }
+
+        private void mUserProfile_Click(object sender, RoutedEventArgs e)
+        {
+            fullNullVisibility();
+            pageUserProfile.Visibility = Visibility.Visible;
+        }
+
+        private void mAddRequest_Click(object sender, RoutedEventArgs e)
+        {
+            fullNullVisibility();
+            pageAddRequest.Visibility = Visibility.Visible;
+        }
+
+        private void mFullRequest_Click(object sender, RoutedEventArgs e)
+        {
+            fullNullVisibility();
+            pageFullRequest.Visibility = Visibility.Visible;
+        }
+
+        private void mExit_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Autorization());
+        }
     }
 }
