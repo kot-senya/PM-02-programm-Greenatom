@@ -6,10 +6,35 @@
         xmlns:local="clr-namespace:HelpAct"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None"
+        WindowStyle="None"            
+        AllowsTransparency="True"
+        Background="Transparent"
         Icon="pack://application:,,,/picture/ic_logo_corp.png"
-        Title="formITactivCreateAct" Height="450" Width="800">
+        Title="Создать акт" Height="450" Width="800">
     <Grid>
-        
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
+            <TextBlock Text="Создать акт" FontSize="20" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15 0 0 0"/>
+            <Button x:Name="bt_close" Margin="0 5 15 0" Style="{StaticResource bt_Close}" Click="bt_close_Click" HorizontalAlignment="Right"/>
+        </Grid>
+
+
+        <Grid Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="0 30 0 0">
+
+        </Grid>
     </Grid>
 </Window>
