@@ -23,5 +23,10 @@ namespace HelpAct
         {
             InitializeComponent();
         }
+
+        private void bt_close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

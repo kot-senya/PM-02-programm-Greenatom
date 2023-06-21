@@ -27,7 +27,18 @@ namespace HelpAct
 
         private void bAuth_Click(object sender, RoutedEventArgs e)
         {
-
+            if(aLogin.Text == "1")
+            {
+                NavigationService.Navigate(new uUserMainPage());
+            }
+            else if(aLogin.Text == "2")
+            {
+                NavigationService.Navigate(new uITactivMainPage());
+            }
+            else if(aLogin.Text == "3")
+            {
+                NavigationService.Navigate(new uUserSapportMainPage());
+            }
         }
     }
 }

@@ -26,6 +26,25 @@
                     </MenuItem>
                 </Menu>
                 <Grid Height="420">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Style="{StaticResource  tbox_Search}" Width="418" Tag="Поиск"/>
+                        <ComboBox Tag="Отображение" Width="140" Height="40" Style="{StaticResource cb_main}">
+                            <CheckBox Content="somthing 1" IsChecked="True" HorizontalAlignment="Right"/>
+                            <CheckBox Content="somthing 2" IsChecked="True" HorizontalAlignment="Right"/>
+                            <CheckBox Content="somthing 3" IsChecked="True" HorizontalAlignment="Right"/>
+                        </ComboBox>
+                        <ComboBox Tag="Фильтры" Width="120" Height="40" Style="{StaticResource cb_main}">
+                            <ComboBox Tag="Какой-то фильтр" Width="160" Height="20" Style="{StaticResource cb_inside}">
+                                <CheckBox Content="somthing 1" IsChecked="True" HorizontalAlignment="Right"/>
+                                <CheckBox Content="somthing 2" IsChecked="True" HorizontalAlignment="Right"/>
+                                <CheckBox Content="somthing 3" IsChecked="True" HorizontalAlignment="Right"/>
+                            </ComboBox>
+                            <CheckBox Content="somthing 1" IsChecked="True" HorizontalAlignment="Right"/>
+                            <CheckBox Content="somthing 2" IsChecked="True" HorizontalAlignment="Right"/>
+                            <CheckBox Content="somthing 3" IsChecked="True" HorizontalAlignment="Right"/>
+                        </ComboBox>
+                    </StackPanel>
+
 
                 </Grid>
             </StackPanel>

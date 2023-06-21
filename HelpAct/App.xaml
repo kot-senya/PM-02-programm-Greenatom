@@ -15,6 +15,7 @@
                 <ResourceDictionary Source="Styles/PasswordBoxStyle.xaml"/>
                 <ResourceDictionary Source="Styles/MenuStyle.xaml"/>
                 <ResourceDictionary Source="Styles/MenuUserStyle.xaml"/>
+                <ResourceDictionary Source="Styles/ComboBoxStyle.xaml"/>
                 
             </ResourceDictionary.MergedDictionaries>
 
