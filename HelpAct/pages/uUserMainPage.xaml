@@ -74,11 +74,14 @@
                 <Button Content="1 страница" Click="Button_Click"/>
                 <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="170" Width="128" Margin="30,-213,0,0">
 
-
                 </Grid>
-                <Grid>
-                    
-                </Grid>
+                <StackPanel Orientation="Vertical" Margin="0 0 0 0">
+                   <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="97" Margin="30,-213,0,0">
+                    <TextBlock Text="Гринатом" Foreground="white" FontFamily="{StaticResource Gabriela}" FontSize="25" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Росатом" Foreground="white" FontFamily="{StaticResource Gabriela}" FontSize="15" HorizontalAlignment="Center"/>
+                </Grid> 
+                </StackPanel>
+                
             </Grid>
             <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageUserProfile">
                 <Button Content="2 страница"/>
