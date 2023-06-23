@@ -44,5 +44,16 @@ namespace HelpAct
         {
             NavigationService.Navigate(new uITactivPersonalAccount());
         }
+
+        private void tb_info_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<string> list = new List<string>();
+            Random rnd = new Random();
+            for(int i = 0; i < 100; i ++)
+            {
+                list.Add(Convert.ToString(rnd.Next(100,145)));
+            }
+            tb_info.ItemsSource = list;
+        }
     }
 }
