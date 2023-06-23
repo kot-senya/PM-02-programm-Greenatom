@@ -16,6 +16,9 @@
                 <ResourceDictionary Source="Styles/MenuStyle.xaml"/>
                 <ResourceDictionary Source="Styles/MenuUserStyle.xaml"/>
                 <ResourceDictionary Source="Styles/ComboBoxStyle.xaml"/>
+                <ResourceDictionary Source="Styles/DataGridStyle.xaml"/>
+                <ResourceDictionary Source="Styles/ScrollBarStyle.xaml"/>
+                <ResourceDictionary Source="Styles/DataPickerStyle.xaml"/>
                 
             </ResourceDictionary.MergedDictionaries>
 
