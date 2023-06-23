@@ -18,7 +18,7 @@
                                 <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="columnHeaderBorder" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="LightBlue" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="LightSteelBlue" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -68,7 +68,7 @@
                         <Border.Background>
                             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                 <GradientStop Offset="0" Color="White" />
-                                <GradientStop Offset="1" Color="LightBlue" />
+                                <GradientStop Offset="1" Color="snow" />
                             </LinearGradientBrush>
                         </Border.Background>
                         <VisualStateManager.VisualStateGroups>
@@ -156,7 +156,7 @@
                                 <VisualState x:Name="Current">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="Gray" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="#0E498B" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -180,7 +180,7 @@
                                 <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="DefaultPath" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
-                                            <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#AA0000" />
+                                            <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#0E498B" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -209,7 +209,7 @@
                                             </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="CheckedPath" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
-                                            <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#CCAA0000" />
+                                            <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#9EB3C2" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -225,7 +225,7 @@
                         <Path x:Name="DefaultPath"
 						      VerticalAlignment="Top"
 						      Data="M0,0 14,7 0,14 Z"
-						      Fill="Gray"
+						      Fill="LightSteelBlue"
 						      Stretch="Fill" />
                         <Path x:Name="CheckedPath"
 						      VerticalAlignment="Top"

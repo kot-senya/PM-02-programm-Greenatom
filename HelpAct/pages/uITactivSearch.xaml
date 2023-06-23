@@ -48,7 +48,7 @@
 
                     <DataGrid x:Name="tb_info" Loaded="tb_info_Loaded" CanUserAddRows="False" AutoGenerateColumns="False" Canvas.Top="110"
                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="50,70,45,20"
-                           >
+                           VerticalGridLinesBrush="#0E498B" HorizontalGridLinesBrush="#0E498B"  >
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding num}" IsReadOnly="True" Header="№" Width="30"/>
                             <DataGridTextColumn Binding="{Binding num}" IsReadOnly="True" Header="Название" Width="*"/>
