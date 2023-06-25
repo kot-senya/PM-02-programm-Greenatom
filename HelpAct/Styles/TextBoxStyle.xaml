@@ -243,7 +243,7 @@
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="FontFamily" Value="Gabriela"/>
         <Setter Property="Height" Value="35"/>
-        <Setter Property="Width" Value="250"/>
+        <Setter Property="Width" Value="310"/>
         <Setter Property="Background" Value="white"/>
         <Setter Property="Foreground" Value="#D9D9D9"/>
         <Setter Property="Padding" Value="5 4.5 5 4"/>
@@ -256,7 +256,7 @@
                 <ControlTemplate TargetType="{x:Type TextBox}">
                     <Border x:Name="TxtBorder"
                             BorderBrush="#0E498B"
-                            BorderThickness="1"
+                            BorderThickness="0"
                             CornerRadius="5"
                             SnapsToDevicePixels="True">
                         <Grid Margin="{TemplateBinding Padding}">

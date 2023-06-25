@@ -25,6 +25,7 @@
     <Style x:Key="DatePickerStyle" TargetType="{x:Type DatePicker}">
         <Setter Property="Margin" Value="0 10 0 0"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="250"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type DatePicker}">
@@ -32,7 +33,7 @@
                         <Border x:Name="Border"
                                 Grid.ColumnSpan="2"
                                 Height="35"
-                                Width="250"
+                                Width="{TemplateBinding Width}"
                                 BorderThickness="1"
                                 BorderBrush="#D9D9D9"
                                 CornerRadius="5"

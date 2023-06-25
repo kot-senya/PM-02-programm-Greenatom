@@ -20,17 +20,33 @@
         </Border>
         <Border BorderThickness="0.5 1 0.5 1" Width="400" Height="450" HorizontalAlignment="Right" CornerRadius="0,15,15,0" BorderBrush="#0E498B" Background="white">
             <Grid>
-               <Button x:Name="bt_close" Margin="0 5 15 0" Style="{StaticResource bt_Close}" Click="bt_close_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBox Style="{StaticResource tbox_forAll}" Tag="Фамилия" Height="35" Width="250"/>
-                    <TextBox Style="{StaticResource tbox_forAll}" Tag="Имя" Height="35" Width="250"/>
-                    <TextBox Style="{StaticResource tbox_forAll}" Tag="Отчество" Height="35" Width="250"/>
-                    <DatePicker Style="{StaticResource DatePickerStyle}" Tag="Дата рождения"/>
-                </StackPanel>
+                <Button x:Name="bt_close" Margin="0 5 15 0" Style="{StaticResource bt_Close}" Click="bt_close_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <TabControl Style="{StaticResource tbc_RoundedTabControlStyle}" Height="360" Width="320" BorderThickness="0">
+                    <TabItem Header="Личные данные" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <TextBox Style="{StaticResource tbox_forAll}" Tag="Фамилия" Height="35" Width="310"/>
+                            <TextBox Style="{StaticResource tbox_forAll}" Tag="Имя" Height="35" Width="310"/>
+                            <TextBox Style="{StaticResource tbox_forAll}" Tag="Отчество" Height="35" Width="310"/>
+                            <DatePicker Style="{StaticResource DatePickerStyle}" Tag="Дата рождения" Width="310"/>
+                            <TextBox Style="{StaticResource tbox_forAll}" Tag="Телефон" Height="35" Width="310"/>
+                            <TextBox Style="{StaticResource tbox_forAll}" Tag="Почта" Height="35" Width="310"/>                           
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="Рабочие моменты" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+                             <ComboBox Style="{StaticResource cb_main}" Tag="Офис" Width="310"/>
+                            <StackPanel Orientation="Horizontal">
+                                <ComboBox Style="{StaticResource cb_main}" Tag="Кабинет" Margin="0 10 10 10" Width="130"/>
+                                <ComboBox Style="{StaticResource cb_main}" Tag="Рабочее место" Margin="0 10 0 10" Width="170"/>
+                            </StackPanel>
+                            <CheckBox Content="Документ о выдаче техники" IsChecked="True"/>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
                 <Button x:Name="bt_add" Margin="0 0 0 15" Height="30" Width="150" Content="Добавить" Style="{StaticResource btn_RoundedButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
 
             </Grid>
-            </Border>
+        </Border>
 
 
 

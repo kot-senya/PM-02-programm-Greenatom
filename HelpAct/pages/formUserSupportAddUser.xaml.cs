@@ -28,5 +28,10 @@ namespace HelpAct
         {
             this.Close();
         }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

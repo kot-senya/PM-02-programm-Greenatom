@@ -47,7 +47,7 @@
                         </StackPanel>
                     </Grid>
 
-                    <DataGrid x:Name="tb_info" Loaded="tb_info_Loaded" CanUserAddRows="False" AutoGenerateColumns="False" Canvas.Top="110"
+                    <DataGrid x:Name="tb_info" CanUserAddRows="False" AutoGenerateColumns="False" Canvas.Top="110"
                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="50,70,45,20"
                            VerticalGridLinesBrush="#0E498B" HorizontalGridLinesBrush="#0E498B"  >
                         <DataGrid.Columns>
