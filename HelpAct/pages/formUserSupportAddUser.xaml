@@ -39,7 +39,7 @@
                                 <ComboBox Style="{StaticResource cb_main}" Tag="Кабинет" Margin="0 10 10 10" Width="130"/>
                                 <ComboBox Style="{StaticResource cb_main}" Tag="Рабочее место" Margin="0 10 0 10" Width="170"/>
                             </StackPanel>
-                            <CheckBox Content="Документ о выдаче техники" IsChecked="False"/>
+                            <CheckBox Content="Документ о выдаче техники" IsChecked="True"/>
                         </StackPanel>
                     </TabItem>
                 </TabControl>

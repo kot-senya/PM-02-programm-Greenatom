@@ -10,30 +10,19 @@
         AllowsTransparency="True"
         Background="Transparent"
         Icon="pack://application:,,,/picture/ic_logo_corp.png"
-        Title="Удаление пользователя" Height="450" Width="800">
+        Title="Удаление пользователя" Height="450" Width="650">
     <Grid>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
-            <TextBlock Text="Удаление пользователя" FontSize="20" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15 0 0 0"/>
-            <Button x:Name="bt_close" Margin="0 5 15 0" Style="{StaticResource bt_Close}" Click="bt_close_Click" HorizontalAlignment="Right"/>
-        </Grid>
-
-
-        <Grid Grid.Row="1"
-                        Grid.Column="1"
-                        Margin="0 30 0 0">
-
-        </Grid>
+        <Border CornerRadius="15,0,0,15" Width="Auto" Height="430">
+            <Grid>
+                <Image Source="/picture/photo.png"  HorizontalAlignment="Left"/>
+                <TextBlock Text="Удалить пользователя" FontSize="20" FontFamily="{StaticResource Gabriela}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="15" TextWrapping="Wrap"/>
+            </Grid>
+        </Border>
+        <Border BorderThickness="0.5 1 0.5 1" Width="400" Height="450" HorizontalAlignment="Right" CornerRadius="0,15,15,0" BorderBrush="#0E498B" Background="white">
+            <Grid>
+                <Button x:Name="bt_close" Margin="0 5 15 0" Style="{StaticResource bt_Close}" Click="bt_close_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            </Grid>
+        </Border>
     </Grid>
+
 </Window>
