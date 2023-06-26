@@ -21,6 +21,24 @@
         <Border BorderThickness="0.5 1 0.5 1" Width="400" Height="450" HorizontalAlignment="Right" CornerRadius="0,15,15,0" BorderBrush="#0E498B" Background="white">
             <Grid>
                 <Button x:Name="bt_close" Margin="0 5 15 0" Style="{StaticResource bt_Close}" Click="bt_close_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <TabControl Style="{StaticResource tbc_RoundedTabControlStyle}" Height="360" Width="320" BorderThickness="0">
+                    <TabItem Header="Добавить" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                        <Grid>
+                            <StackPanel VerticalAlignment="Top">
+                                <ComboBox Style="{StaticResource cb_main}" Tag="Тип" Width="310"/>
+                                <ComboBox Style="{StaticResource cb_main}" Tag="Техника" Width="310"/>
+                            </StackPanel>
+                            <Button Content="Создать" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Общие сведения" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                        <Grid>
+                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                            </StackPanel>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
             </Grid>
         </Border>
     </Grid>

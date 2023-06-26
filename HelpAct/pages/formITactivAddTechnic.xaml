@@ -30,7 +30,7 @@
                                     
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <Button Content="Добавить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
+                            <Button Content="Закончить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Добавить" Style="{StaticResource tbi_RoundedTabItemStyle}">
