@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:HelpAct"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="uUserMainPage" Background="#0E498B">
+      Title="uUserMainPage.xaml" Background="#0E498B">
 
     <Border CornerRadius="10"
               BorderThickness="1"
@@ -70,31 +70,26 @@
                 <RadioButton x:Name="mExit" Click="mExit_Click" Style="{StaticResource menuButton_Exit}" Content="Выход" Tag ="{StaticResource colors}" VerticalAlignment="Bottom"/>
             </Grid>
 
-            <Grid Grid.Column="1" Visibility="Visible" x:Name="pageMain">
+            <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageMain">
                 <Button Content="1 страница" Click="Button_Click"/>
-                <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="170" Width="128" Margin="30,-213,0,0">
-
-                </Grid>
-                <StackPanel Orientation="Vertical" Margin="0 0 0 0">
-                   <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="97" Margin="30,-213,0,0">
-                    <TextBlock Text="Гринатом" Foreground="white" FontFamily="{StaticResource Gabriela}" FontSize="25" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Росатом" Foreground="white" FontFamily="{StaticResource Gabriela}" FontSize="15" HorizontalAlignment="Center"/>
-                </Grid> 
-                </StackPanel>
-                
             </Grid>
+
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="170" Width="128" Margin="30,-213,0,0">
+            </Grid>
+
             <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageUserProfile">
-                <Button Content="2 страница"/>
 
-            </Grid>
-            <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageAddRequest">
-                <Button Content="3 страница"/>
-                <Image Source="pack://application:,,,/picture/pik_cat_off.jpg"/>
+                <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageAddRequest">
+                    <TextBox x:Name ="uName"  Style="{StaticResource tbox_forAll}" Tag="Фио" Margin=" 0 -210 0 0" Foreground="#0E3969" />
+                    <TextBox x:Name="uEror" Tag="Описание ошибки"  Style="{StaticResource tbox_forAll}"  Margin="0,-20,0,0" Foreground="#0E3969" TextWrapping="Wrap"/>
+                    <Button x:Name="bSend" Width="222" Height="38" Margin="0 450 0 0"  Content="Отправить" FontSize="20" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                </Grid>
             </Grid>
             <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageAllRequest">
-                <Button Content="4 страница"/>
+                    <Button Content="4 страница"/>
+
+                </Grid>
             </Grid>
-        </Grid>
     </Border>
 
 </Page>
