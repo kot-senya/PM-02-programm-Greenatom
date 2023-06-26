@@ -21,6 +21,30 @@
         <Border BorderThickness="0.5 1 0.5 1" Width="400" Height="450" HorizontalAlignment="Right" CornerRadius="0,15,15,0" BorderBrush="#0E498B" Background="white">
             <Grid>
                 <Button x:Name="bt_close" Margin="0 5 15 0" Style="{StaticResource bt_Close}" Click="bt_close_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <TabControl Style="{StaticResource tbc_RoundedTabControlStyle}" Height="360" Width="320" BorderThickness="0">
+                    <TabItem Header="Общие сведения" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                        <Grid>
+                            <DataGrid Height="270" VerticalAlignment="Top"
+                                      VerticalGridLinesBrush="#0E498B" HorizontalGridLinesBrush="#0E498B">
+                                <DataGrid.Columns>
+                                    
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <Button Content="Добавить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Добавить" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                        <Grid>
+                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <TextBox Style="{StaticResource tbox_forAll}" Tag="Название" Height="35" Width="310"/>
+                                <ComboBox Style="{StaticResource cb_main}" Tag="Тип" Width="310"/>
+                                <TextBox Style="{StaticResource tbox_forAll}" Tag="Количество" Height="35" Width="310"/>
+                            </StackPanel>
+                            <Button Content="Добавить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
+                        </Grid>
+
+                    </TabItem>
+                </TabControl>
             </Grid>
         </Border>
     </Grid>
