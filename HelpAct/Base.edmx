@@ -1,0 +1,1348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Applications">
+          <Key>
+            <PropertyRef Name="ID_application" />
+          </Key>
+          <Property Name="ID_application" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date_start" Type="date" />
+          <Property Name="Date_finish" Type="date" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="ID_user" Type="int" />
+          <Property Name="ID_type_application" Type="int" />
+          <Property Name="ID_error" Type="int" />
+        </EntityType>
+        <EntityType Name="Data_users">
+          <Key>
+            <PropertyRef Name="id_data_user" />
+          </Key>
+          <Property Name="id_data_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="255" />
+          <Property Name="ID_user" Type="int" />
+          <Property Name="ID_role_user" Type="int" />
+        </EntityType>
+        <EntityType Name="Equipment">
+          <Key>
+            <PropertyRef Name="ID_equipment" />
+          </Key>
+          <Property Name="ID_equipment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_equipment" Type="varchar" MaxLength="255" />
+          <Property Name="Serial_number" Type="varchar" MaxLength="255" />
+          <Property Name="ID_type_equipment" Type="int" />
+        </EntityType>
+        <EntityType Name="Error_state">
+          <Key>
+            <PropertyRef Name="ID_error" />
+          </Key>
+          <Property Name="ID_error" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_error" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Office_rooms">
+          <Key>
+            <PropertyRef Name="ID_office_room" />
+          </Key>
+          <Property Name="ID_office_room" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cabinet_office" Type="varchar" MaxLength="10" />
+          <Property Name="ID_office" Type="int" />
+        </EntityType>
+        <EntityType Name="Offices">
+          <Key>
+            <PropertyRef Name="ID_office" />
+          </Key>
+          <Property Name="ID_office" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_office" Type="varchar" MaxLength="255" />
+          <Property Name="Adress_office" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="ID_role_user" />
+          </Key>
+          <Property Name="ID_role_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_role" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Software">
+          <Key>
+            <PropertyRef Name="ID_software" />
+          </Key>
+          <Property Name="ID_software" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_software" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Status_application">
+          <Key>
+            <PropertyRef Name="ID_status_application" />
+          </Key>
+          <Property Name="ID_status_application" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Modified_date" Type="date" />
+          <Property Name="Comment" Type="varchar" MaxLength="255" />
+          <Property Name="ID_application" Type="int" />
+          <Property Name="ID_user" Type="int" />
+          <Property Name="ID_error" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Turnover_equipm">
+          <Key>
+            <PropertyRef Name="ID_turnover_equipm" />
+          </Key>
+          <Property Name="ID_turnover_equipm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date_turnover" Type="date" />
+          <Property Name="Count_equipm" Type="int" />
+          <Property Name="ID_equipment" Type="int" />
+          <Property Name="ID_type_turnover" Type="int" />
+        </EntityType>
+        <EntityType Name="Type_application">
+          <Key>
+            <PropertyRef Name="ID_type_application" />
+          </Key>
+          <Property Name="ID_type_application" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_type_application" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Type_equipment">
+          <Key>
+            <PropertyRef Name="ID_type_equipment" />
+          </Key>
+          <Property Name="ID_type_equipment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_type_equipment" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Type_turnover">
+          <Key>
+            <PropertyRef Name="ID_type_turnover" />
+          </Key>
+          <Property Name="ID_type_turnover" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_type_turnover" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID_user" />
+          </Key>
+          <Property Name="ID_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Surname" Type="varchar" MaxLength="255" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="Patronymic" Type="varchar" MaxLength="255" />
+          <Property Name="Birthday" Type="date" />
+          <Property Name="Phone" Type="varchar" MaxLength="255" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Workplace">
+          <Key>
+            <PropertyRef Name="ID_workplace" />
+          </Key>
+          <Property Name="ID_workplace" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Number_workplace" Type="varchar" MaxLength="255" />
+          <Property Name="ID_user" Type="int" />
+          <Property Name="ID_office_room" Type="int" />
+        </EntityType>
+        <EntityType Name="Workplace_equipment">
+          <Key>
+            <PropertyRef Name="ID_workplace_equipment" />
+          </Key>
+          <Property Name="ID_workplace_equipment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_workplace" Type="int" />
+          <Property Name="ID_equipment" Type="int" />
+        </EntityType>
+        <EntityType Name="Workplace_software">
+          <Key>
+            <PropertyRef Name="ID_workplace_software" />
+          </Key>
+          <Property Name="ID_workplace_software" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_workplace" Type="int" />
+          <Property Name="ID_software" Type="int" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "PM-02-greenatom.dbo.View_User" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="View_User">
+          <Key>
+            <PropertyRef Name="Login" />
+          </Key>
+          <Property Name="Surname" Type="varchar" MaxLength="255" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="Patronymic" Type="varchar" MaxLength="255" />
+          <Property Name="Birthday" Type="date" />
+          <Property Name="Phone" Type="varchar" MaxLength="255" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="Login" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="255" />
+          <Property Name="Name_role" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "PM-02-greenatom.dbo.View_workplace" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="View_workplace">
+          <Property Name="Name_office" Type="varchar" MaxLength="255" />
+          <Property Name="Cabinet_office" Type="varchar" MaxLength="10" />
+          <Property Name="Number_workplace" Type="varchar" MaxLength="255" />
+          <Property Name="Surname" Type="varchar" MaxLength="255" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="Patronymic" Type="varchar" MaxLength="255" />
+        </EntityType>-->
+        <Association Name="FK__Applicati__ID_er__52593CB8">
+          <End Role="Error_state" Type="Self.Error_state" Multiplicity="0..1" />
+          <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Error_state">
+              <PropertyRef Name="ID_error" />
+            </Principal>
+            <Dependent Role="Applications">
+              <PropertyRef Name="ID_error" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Applicati__ID_ty__5165187F">
+          <End Role="Type_application" Type="Self.Type_application" Multiplicity="0..1" />
+          <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type_application">
+              <PropertyRef Name="ID_type_application" />
+            </Principal>
+            <Dependent Role="Applications">
+              <PropertyRef Name="ID_type_application" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Applicati__ID_us__5070F446">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID_user" />
+            </Principal>
+            <Dependent Role="Applications">
+              <PropertyRef Name="ID_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Data_user__ID_ro__4316F928">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+          <End Role="Data_users" Type="Self.Data_users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="ID_role_user" />
+            </Principal>
+            <Dependent Role="Data_users">
+              <PropertyRef Name="ID_role_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Data_user__ID_us__4222D4EF">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Data_users" Type="Self.Data_users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID_user" />
+            </Principal>
+            <Dependent Role="Data_users">
+              <PropertyRef Name="ID_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Equipment__ID_ty__4BAC3F29">
+          <End Role="Type_equipment" Type="Self.Type_equipment" Multiplicity="0..1" />
+          <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type_equipment">
+              <PropertyRef Name="ID_type_equipment" />
+            </Principal>
+            <Dependent Role="Equipment">
+              <PropertyRef Name="ID_type_equipment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Office_ro__ID_of__398D8EEE">
+          <End Role="Offices" Type="Self.Offices" Multiplicity="0..1" />
+          <End Role="Office_rooms" Type="Self.Office_rooms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Offices">
+              <PropertyRef Name="ID_office" />
+            </Principal>
+            <Dependent Role="Office_rooms">
+              <PropertyRef Name="ID_office" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Status_ap__ID_ap__6477ECF3">
+          <End Role="Applications" Type="Self.Applications" Multiplicity="0..1" />
+          <End Role="Status_application" Type="Self.Status_application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applications">
+              <PropertyRef Name="ID_application" />
+            </Principal>
+            <Dependent Role="Status_application">
+              <PropertyRef Name="ID_application" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Status_ap__ID_er__66603565">
+          <End Role="Error_state" Type="Self.Error_state" Multiplicity="0..1" />
+          <End Role="Status_application" Type="Self.Status_application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Error_state">
+              <PropertyRef Name="ID_error" />
+            </Principal>
+            <Dependent Role="Status_application">
+              <PropertyRef Name="ID_error" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Status_ap__ID_us__656C112C">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Status_application" Type="Self.Status_application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID_user" />
+            </Principal>
+            <Dependent Role="Status_application">
+              <PropertyRef Name="ID_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Turnover___ID_eq__60A75C0F">
+          <End Role="Equipment" Type="Self.Equipment" Multiplicity="0..1" />
+          <End Role="Turnover_equipm" Type="Self.Turnover_equipm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment">
+              <PropertyRef Name="ID_equipment" />
+            </Principal>
+            <Dependent Role="Turnover_equipm">
+              <PropertyRef Name="ID_equipment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Turnover___ID_ty__619B8048">
+          <End Role="Type_turnover" Type="Self.Type_turnover" Multiplicity="0..1" />
+          <End Role="Turnover_equipm" Type="Self.Turnover_equipm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type_turnover">
+              <PropertyRef Name="ID_type_turnover" />
+            </Principal>
+            <Dependent Role="Turnover_equipm">
+              <PropertyRef Name="ID_type_turnover" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_eq__5DCAEF64">
+          <End Role="Equipment" Type="Self.Equipment" Multiplicity="0..1" />
+          <End Role="Workplace_equipment" Type="Self.Workplace_equipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment">
+              <PropertyRef Name="ID_equipment" />
+            </Principal>
+            <Dependent Role="Workplace_equipment">
+              <PropertyRef Name="ID_equipment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_of__5629CD9C">
+          <End Role="Office_rooms" Type="Self.Office_rooms" Multiplicity="0..1" />
+          <End Role="Workplace" Type="Self.Workplace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Office_rooms">
+              <PropertyRef Name="ID_office_room" />
+            </Principal>
+            <Dependent Role="Workplace">
+              <PropertyRef Name="ID_office_room" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_so__59FA5E80">
+          <End Role="Software" Type="Self.Software" Multiplicity="0..1" />
+          <End Role="Workplace_software" Type="Self.Workplace_software" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Software">
+              <PropertyRef Name="ID_software" />
+            </Principal>
+            <Dependent Role="Workplace_software">
+              <PropertyRef Name="ID_software" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_us__5535A963">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Workplace" Type="Self.Workplace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID_user" />
+            </Principal>
+            <Dependent Role="Workplace">
+              <PropertyRef Name="ID_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_wo__59063A47">
+          <End Role="Workplace" Type="Self.Workplace" Multiplicity="0..1" />
+          <End Role="Workplace_software" Type="Self.Workplace_software" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workplace">
+              <PropertyRef Name="ID_workplace" />
+            </Principal>
+            <Dependent Role="Workplace_software">
+              <PropertyRef Name="ID_workplace" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_wo__5CD6CB2B">
+          <End Role="Workplace" Type="Self.Workplace" Multiplicity="0..1" />
+          <End Role="Workplace_equipment" Type="Self.Workplace_equipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workplace">
+              <PropertyRef Name="ID_workplace" />
+            </Principal>
+            <Dependent Role="Workplace_equipment">
+              <PropertyRef Name="ID_workplace" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="Хранилище ModelContainer">
+          <EntitySet Name="Applications" EntityType="Self.Applications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_users" EntityType="Self.Data_users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Equipment" EntityType="Self.Equipment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Error_state" EntityType="Self.Error_state" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Office_rooms" EntityType="Self.Office_rooms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Offices" EntityType="Self.Offices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Software" EntityType="Self.Software" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status_application" EntityType="Self.Status_application" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Turnover_equipm" EntityType="Self.Turnover_equipm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Type_application" EntityType="Self.Type_application" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Type_equipment" EntityType="Self.Type_equipment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Type_turnover" EntityType="Self.Type_turnover" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Workplace" EntityType="Self.Workplace" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Workplace_equipment" EntityType="Self.Workplace_equipment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Workplace_software" EntityType="Self.Workplace_software" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="View_User" EntityType="Self.View_User" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_User].[Surname] AS [Surname], 
+    [View_User].[Name] AS [Name], 
+    [View_User].[Patronymic] AS [Patronymic], 
+    [View_User].[Birthday] AS [Birthday], 
+    [View_User].[Phone] AS [Phone], 
+    [View_User].[Email] AS [Email], 
+    [View_User].[Login] AS [Login], 
+    [View_User].[Password] AS [Password], 
+    [View_User].[Name_role] AS [Name_role]
+    FROM [dbo].[View_User] AS [View_User]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Applicati__ID_er__52593CB8" Association="Self.FK__Applicati__ID_er__52593CB8">
+            <End Role="Error_state" EntitySet="Error_state" />
+            <End Role="Applications" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Applicati__ID_ty__5165187F" Association="Self.FK__Applicati__ID_ty__5165187F">
+            <End Role="Type_application" EntitySet="Type_application" />
+            <End Role="Applications" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Applicati__ID_us__5070F446" Association="Self.FK__Applicati__ID_us__5070F446">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Applications" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Data_user__ID_ro__4316F928" Association="Self.FK__Data_user__ID_ro__4316F928">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Data_users" EntitySet="Data_users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Data_user__ID_us__4222D4EF" Association="Self.FK__Data_user__ID_us__4222D4EF">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Data_users" EntitySet="Data_users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Equipment__ID_ty__4BAC3F29" Association="Self.FK__Equipment__ID_ty__4BAC3F29">
+            <End Role="Type_equipment" EntitySet="Type_equipment" />
+            <End Role="Equipment" EntitySet="Equipment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Office_ro__ID_of__398D8EEE" Association="Self.FK__Office_ro__ID_of__398D8EEE">
+            <End Role="Offices" EntitySet="Offices" />
+            <End Role="Office_rooms" EntitySet="Office_rooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Status_ap__ID_ap__6477ECF3" Association="Self.FK__Status_ap__ID_ap__6477ECF3">
+            <End Role="Applications" EntitySet="Applications" />
+            <End Role="Status_application" EntitySet="Status_application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Status_ap__ID_er__66603565" Association="Self.FK__Status_ap__ID_er__66603565">
+            <End Role="Error_state" EntitySet="Error_state" />
+            <End Role="Status_application" EntitySet="Status_application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Status_ap__ID_us__656C112C" Association="Self.FK__Status_ap__ID_us__656C112C">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Status_application" EntitySet="Status_application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Turnover___ID_eq__60A75C0F" Association="Self.FK__Turnover___ID_eq__60A75C0F">
+            <End Role="Equipment" EntitySet="Equipment" />
+            <End Role="Turnover_equipm" EntitySet="Turnover_equipm" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Turnover___ID_ty__619B8048" Association="Self.FK__Turnover___ID_ty__619B8048">
+            <End Role="Type_turnover" EntitySet="Type_turnover" />
+            <End Role="Turnover_equipm" EntitySet="Turnover_equipm" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_eq__5DCAEF64" Association="Self.FK__Workplace__ID_eq__5DCAEF64">
+            <End Role="Equipment" EntitySet="Equipment" />
+            <End Role="Workplace_equipment" EntitySet="Workplace_equipment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_of__5629CD9C" Association="Self.FK__Workplace__ID_of__5629CD9C">
+            <End Role="Office_rooms" EntitySet="Office_rooms" />
+            <End Role="Workplace" EntitySet="Workplace" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_so__59FA5E80" Association="Self.FK__Workplace__ID_so__59FA5E80">
+            <End Role="Software" EntitySet="Software" />
+            <End Role="Workplace_software" EntitySet="Workplace_software" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_us__5535A963" Association="Self.FK__Workplace__ID_us__5535A963">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Workplace" EntitySet="Workplace" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_wo__59063A47" Association="Self.FK__Workplace__ID_wo__59063A47">
+            <End Role="Workplace" EntitySet="Workplace" />
+            <End Role="Workplace_software" EntitySet="Workplace_software" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_wo__5CD6CB2B" Association="Self.FK__Workplace__ID_wo__5CD6CB2B">
+            <End Role="Workplace" EntitySet="Workplace" />
+            <End Role="Workplace_equipment" EntitySet="Workplace_equipment" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Applications">
+          <Key>
+            <PropertyRef Name="ID_application" />
+          </Key>
+          <Property Name="ID_application" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date_start" Type="DateTime" Precision="0" />
+          <Property Name="Date_finish" Type="DateTime" Precision="0" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ID_user" Type="Int32" />
+          <Property Name="ID_type_application" Type="Int32" />
+          <Property Name="ID_error" Type="Int32" />
+          <NavigationProperty Name="Error_state" Relationship="Self.FK__Applicati__ID_er__52593CB8" FromRole="Applications" ToRole="Error_state" />
+          <NavigationProperty Name="Type_application" Relationship="Self.FK__Applicati__ID_ty__5165187F" FromRole="Applications" ToRole="Type_application" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__Applicati__ID_us__5070F446" FromRole="Applications" ToRole="Users" />
+          <NavigationProperty Name="Status_application" Relationship="Self.FK__Status_ap__ID_ap__6477ECF3" FromRole="Applications" ToRole="Status_application" />
+        </EntityType>
+        <EntityType Name="Data_users">
+          <Key>
+            <PropertyRef Name="id_data_user" />
+          </Key>
+          <Property Name="id_data_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ID_user" Type="Int32" />
+          <Property Name="ID_role_user" Type="Int32" />
+          <NavigationProperty Name="Roles" Relationship="Self.FK__Data_user__ID_ro__4316F928" FromRole="Data_users" ToRole="Roles" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__Data_user__ID_us__4222D4EF" FromRole="Data_users" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Equipment">
+          <Key>
+            <PropertyRef Name="ID_equipment" />
+          </Key>
+          <Property Name="ID_equipment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_equipment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Serial_number" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ID_type_equipment" Type="Int32" />
+          <NavigationProperty Name="Type_equipment" Relationship="Self.FK__Equipment__ID_ty__4BAC3F29" FromRole="Equipment" ToRole="Type_equipment" />
+          <NavigationProperty Name="Turnover_equipm" Relationship="Self.FK__Turnover___ID_eq__60A75C0F" FromRole="Equipment" ToRole="Turnover_equipm" />
+          <NavigationProperty Name="Workplace_equipment" Relationship="Self.FK__Workplace__ID_eq__5DCAEF64" FromRole="Equipment" ToRole="Workplace_equipment" />
+        </EntityType>
+        <EntityType Name="Error_state">
+          <Key>
+            <PropertyRef Name="ID_error" />
+          </Key>
+          <Property Name="ID_error" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_error" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Applications" Relationship="Self.FK__Applicati__ID_er__52593CB8" FromRole="Error_state" ToRole="Applications" />
+          <NavigationProperty Name="Status_application" Relationship="Self.FK__Status_ap__ID_er__66603565" FromRole="Error_state" ToRole="Status_application" />
+        </EntityType>
+        <EntityType Name="Office_rooms">
+          <Key>
+            <PropertyRef Name="ID_office_room" />
+          </Key>
+          <Property Name="ID_office_room" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cabinet_office" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ID_office" Type="Int32" />
+          <NavigationProperty Name="Offices" Relationship="Self.FK__Office_ro__ID_of__398D8EEE" FromRole="Office_rooms" ToRole="Offices" />
+          <NavigationProperty Name="Workplace" Relationship="Self.FK__Workplace__ID_of__5629CD9C" FromRole="Office_rooms" ToRole="Workplace" />
+        </EntityType>
+        <EntityType Name="Offices">
+          <Key>
+            <PropertyRef Name="ID_office" />
+          </Key>
+          <Property Name="ID_office" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_office" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Adress_office" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Office_rooms" Relationship="Self.FK__Office_ro__ID_of__398D8EEE" FromRole="Offices" ToRole="Office_rooms" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="ID_role_user" />
+          </Key>
+          <Property Name="ID_role_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_role" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Data_users" Relationship="Self.FK__Data_user__ID_ro__4316F928" FromRole="Roles" ToRole="Data_users" />
+        </EntityType>
+        <EntityType Name="Software">
+          <Key>
+            <PropertyRef Name="ID_software" />
+          </Key>
+          <Property Name="ID_software" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_software" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Workplace_software" Relationship="Self.FK__Workplace__ID_so__59FA5E80" FromRole="Software" ToRole="Workplace_software" />
+        </EntityType>
+        <EntityType Name="Status_application">
+          <Key>
+            <PropertyRef Name="ID_status_application" />
+          </Key>
+          <Property Name="ID_status_application" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Modified_date" Type="DateTime" Precision="0" />
+          <Property Name="Comment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ID_application" Type="Int32" />
+          <Property Name="ID_user" Type="Int32" />
+          <Property Name="ID_error" Type="Int32" />
+          <NavigationProperty Name="Applications" Relationship="Self.FK__Status_ap__ID_ap__6477ECF3" FromRole="Status_application" ToRole="Applications" />
+          <NavigationProperty Name="Error_state" Relationship="Self.FK__Status_ap__ID_er__66603565" FromRole="Status_application" ToRole="Error_state" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__Status_ap__ID_us__656C112C" FromRole="Status_application" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Turnover_equipm">
+          <Key>
+            <PropertyRef Name="ID_turnover_equipm" />
+          </Key>
+          <Property Name="ID_turnover_equipm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date_turnover" Type="DateTime" Precision="0" />
+          <Property Name="Count_equipm" Type="Int32" />
+          <Property Name="ID_equipment" Type="Int32" />
+          <Property Name="ID_type_turnover" Type="Int32" />
+          <NavigationProperty Name="Equipment" Relationship="Self.FK__Turnover___ID_eq__60A75C0F" FromRole="Turnover_equipm" ToRole="Equipment" />
+          <NavigationProperty Name="Type_turnover" Relationship="Self.FK__Turnover___ID_ty__619B8048" FromRole="Turnover_equipm" ToRole="Type_turnover" />
+        </EntityType>
+        <EntityType Name="Type_application">
+          <Key>
+            <PropertyRef Name="ID_type_application" />
+          </Key>
+          <Property Name="ID_type_application" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_type_application" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Applications" Relationship="Self.FK__Applicati__ID_ty__5165187F" FromRole="Type_application" ToRole="Applications" />
+        </EntityType>
+        <EntityType Name="Type_equipment">
+          <Key>
+            <PropertyRef Name="ID_type_equipment" />
+          </Key>
+          <Property Name="ID_type_equipment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_type_equipment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Equipment" Relationship="Self.FK__Equipment__ID_ty__4BAC3F29" FromRole="Type_equipment" ToRole="Equipment" />
+        </EntityType>
+        <EntityType Name="Type_turnover">
+          <Key>
+            <PropertyRef Name="ID_type_turnover" />
+          </Key>
+          <Property Name="ID_type_turnover" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_type_turnover" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Turnover_equipm" Relationship="Self.FK__Turnover___ID_ty__619B8048" FromRole="Type_turnover" ToRole="Turnover_equipm" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID_user" />
+          </Key>
+          <Property Name="ID_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Surname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Patronymic" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Birthday" Type="DateTime" Precision="0" />
+          <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Applications" Relationship="Self.FK__Applicati__ID_us__5070F446" FromRole="Users" ToRole="Applications" />
+          <NavigationProperty Name="Data_users" Relationship="Self.FK__Data_user__ID_us__4222D4EF" FromRole="Users" ToRole="Data_users" />
+          <NavigationProperty Name="Status_application" Relationship="Self.FK__Status_ap__ID_us__656C112C" FromRole="Users" ToRole="Status_application" />
+          <NavigationProperty Name="Workplace" Relationship="Self.FK__Workplace__ID_us__5535A963" FromRole="Users" ToRole="Workplace" />
+        </EntityType>
+        <EntityType Name="Workplace">
+          <Key>
+            <PropertyRef Name="ID_workplace" />
+          </Key>
+          <Property Name="ID_workplace" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Number_workplace" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ID_user" Type="Int32" />
+          <Property Name="ID_office_room" Type="Int32" />
+          <NavigationProperty Name="Office_rooms" Relationship="Self.FK__Workplace__ID_of__5629CD9C" FromRole="Workplace" ToRole="Office_rooms" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__Workplace__ID_us__5535A963" FromRole="Workplace" ToRole="Users" />
+          <NavigationProperty Name="Workplace_software" Relationship="Self.FK__Workplace__ID_wo__59063A47" FromRole="Workplace" ToRole="Workplace_software" />
+          <NavigationProperty Name="Workplace_equipment" Relationship="Self.FK__Workplace__ID_wo__5CD6CB2B" FromRole="Workplace" ToRole="Workplace_equipment" />
+        </EntityType>
+        <EntityType Name="Workplace_equipment">
+          <Key>
+            <PropertyRef Name="ID_workplace_equipment" />
+          </Key>
+          <Property Name="ID_workplace_equipment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_workplace" Type="Int32" />
+          <Property Name="ID_equipment" Type="Int32" />
+          <NavigationProperty Name="Equipment" Relationship="Self.FK__Workplace__ID_eq__5DCAEF64" FromRole="Workplace_equipment" ToRole="Equipment" />
+          <NavigationProperty Name="Workplace" Relationship="Self.FK__Workplace__ID_wo__5CD6CB2B" FromRole="Workplace_equipment" ToRole="Workplace" />
+        </EntityType>
+        <EntityType Name="Workplace_software">
+          <Key>
+            <PropertyRef Name="ID_workplace_software" />
+          </Key>
+          <Property Name="ID_workplace_software" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_workplace" Type="Int32" />
+          <Property Name="ID_software" Type="Int32" />
+          <NavigationProperty Name="Software" Relationship="Self.FK__Workplace__ID_so__59FA5E80" FromRole="Workplace_software" ToRole="Software" />
+          <NavigationProperty Name="Workplace" Relationship="Self.FK__Workplace__ID_wo__59063A47" FromRole="Workplace_software" ToRole="Workplace" />
+        </EntityType>
+        <EntityType Name="View_User">
+          <Key>
+            <PropertyRef Name="Login" />
+          </Key>
+          <Property Name="Surname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Patronymic" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Birthday" Type="DateTime" Precision="0" />
+          <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Login" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Name_role" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__Applicati__ID_er__52593CB8">
+          <End Role="Error_state" Type="Self.Error_state" Multiplicity="0..1" />
+          <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Error_state">
+              <PropertyRef Name="ID_error" />
+            </Principal>
+            <Dependent Role="Applications">
+              <PropertyRef Name="ID_error" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Applicati__ID_ty__5165187F">
+          <End Role="Type_application" Type="Self.Type_application" Multiplicity="0..1" />
+          <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type_application">
+              <PropertyRef Name="ID_type_application" />
+            </Principal>
+            <Dependent Role="Applications">
+              <PropertyRef Name="ID_type_application" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Applicati__ID_us__5070F446">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID_user" />
+            </Principal>
+            <Dependent Role="Applications">
+              <PropertyRef Name="ID_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Status_ap__ID_ap__6477ECF3">
+          <End Role="Applications" Type="Self.Applications" Multiplicity="0..1" />
+          <End Role="Status_application" Type="Self.Status_application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applications">
+              <PropertyRef Name="ID_application" />
+            </Principal>
+            <Dependent Role="Status_application">
+              <PropertyRef Name="ID_application" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Data_user__ID_ro__4316F928">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+          <End Role="Data_users" Type="Self.Data_users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="ID_role_user" />
+            </Principal>
+            <Dependent Role="Data_users">
+              <PropertyRef Name="ID_role_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Data_user__ID_us__4222D4EF">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Data_users" Type="Self.Data_users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID_user" />
+            </Principal>
+            <Dependent Role="Data_users">
+              <PropertyRef Name="ID_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Equipment__ID_ty__4BAC3F29">
+          <End Role="Type_equipment" Type="Self.Type_equipment" Multiplicity="0..1" />
+          <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type_equipment">
+              <PropertyRef Name="ID_type_equipment" />
+            </Principal>
+            <Dependent Role="Equipment">
+              <PropertyRef Name="ID_type_equipment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Turnover___ID_eq__60A75C0F">
+          <End Role="Equipment" Type="Self.Equipment" Multiplicity="0..1" />
+          <End Role="Turnover_equipm" Type="Self.Turnover_equipm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment">
+              <PropertyRef Name="ID_equipment" />
+            </Principal>
+            <Dependent Role="Turnover_equipm">
+              <PropertyRef Name="ID_equipment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_eq__5DCAEF64">
+          <End Role="Equipment" Type="Self.Equipment" Multiplicity="0..1" />
+          <End Role="Workplace_equipment" Type="Self.Workplace_equipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment">
+              <PropertyRef Name="ID_equipment" />
+            </Principal>
+            <Dependent Role="Workplace_equipment">
+              <PropertyRef Name="ID_equipment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Status_ap__ID_er__66603565">
+          <End Role="Error_state" Type="Self.Error_state" Multiplicity="0..1" />
+          <End Role="Status_application" Type="Self.Status_application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Error_state">
+              <PropertyRef Name="ID_error" />
+            </Principal>
+            <Dependent Role="Status_application">
+              <PropertyRef Name="ID_error" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Office_ro__ID_of__398D8EEE">
+          <End Role="Offices" Type="Self.Offices" Multiplicity="0..1" />
+          <End Role="Office_rooms" Type="Self.Office_rooms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Offices">
+              <PropertyRef Name="ID_office" />
+            </Principal>
+            <Dependent Role="Office_rooms">
+              <PropertyRef Name="ID_office" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_of__5629CD9C">
+          <End Role="Office_rooms" Type="Self.Office_rooms" Multiplicity="0..1" />
+          <End Role="Workplace" Type="Self.Workplace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Office_rooms">
+              <PropertyRef Name="ID_office_room" />
+            </Principal>
+            <Dependent Role="Workplace">
+              <PropertyRef Name="ID_office_room" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_so__59FA5E80">
+          <End Role="Software" Type="Self.Software" Multiplicity="0..1" />
+          <End Role="Workplace_software" Type="Self.Workplace_software" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Software">
+              <PropertyRef Name="ID_software" />
+            </Principal>
+            <Dependent Role="Workplace_software">
+              <PropertyRef Name="ID_software" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Status_ap__ID_us__656C112C">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Status_application" Type="Self.Status_application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID_user" />
+            </Principal>
+            <Dependent Role="Status_application">
+              <PropertyRef Name="ID_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Turnover___ID_ty__619B8048">
+          <End Role="Type_turnover" Type="Self.Type_turnover" Multiplicity="0..1" />
+          <End Role="Turnover_equipm" Type="Self.Turnover_equipm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type_turnover">
+              <PropertyRef Name="ID_type_turnover" />
+            </Principal>
+            <Dependent Role="Turnover_equipm">
+              <PropertyRef Name="ID_type_turnover" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_us__5535A963">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Workplace" Type="Self.Workplace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID_user" />
+            </Principal>
+            <Dependent Role="Workplace">
+              <PropertyRef Name="ID_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_wo__59063A47">
+          <End Role="Workplace" Type="Self.Workplace" Multiplicity="0..1" />
+          <End Role="Workplace_software" Type="Self.Workplace_software" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workplace">
+              <PropertyRef Name="ID_workplace" />
+            </Principal>
+            <Dependent Role="Workplace_software">
+              <PropertyRef Name="ID_workplace" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Workplace__ID_wo__5CD6CB2B">
+          <End Role="Workplace" Type="Self.Workplace" Multiplicity="0..1" />
+          <End Role="Workplace_equipment" Type="Self.Workplace_equipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workplace">
+              <PropertyRef Name="ID_workplace" />
+            </Principal>
+            <Dependent Role="Workplace_equipment">
+              <PropertyRef Name="ID_workplace" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Applications" EntityType="Self.Applications" />
+          <EntitySet Name="Data_users" EntityType="Self.Data_users" />
+          <EntitySet Name="Equipment" EntityType="Self.Equipment" />
+          <EntitySet Name="Error_state" EntityType="Self.Error_state" />
+          <EntitySet Name="Office_rooms" EntityType="Self.Office_rooms" />
+          <EntitySet Name="Offices" EntityType="Self.Offices" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" />
+          <EntitySet Name="Software" EntityType="Self.Software" />
+          <EntitySet Name="Status_application" EntityType="Self.Status_application" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Turnover_equipm" EntityType="Self.Turnover_equipm" />
+          <EntitySet Name="Type_application" EntityType="Self.Type_application" />
+          <EntitySet Name="Type_equipment" EntityType="Self.Type_equipment" />
+          <EntitySet Name="Type_turnover" EntityType="Self.Type_turnover" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <EntitySet Name="Workplace" EntityType="Self.Workplace" />
+          <EntitySet Name="Workplace_equipment" EntityType="Self.Workplace_equipment" />
+          <EntitySet Name="Workplace_software" EntityType="Self.Workplace_software" />
+          <EntitySet Name="View_User" EntityType="Self.View_User" />
+          <AssociationSet Name="FK__Applicati__ID_er__52593CB8" Association="Self.FK__Applicati__ID_er__52593CB8">
+            <End Role="Error_state" EntitySet="Error_state" />
+            <End Role="Applications" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Applicati__ID_ty__5165187F" Association="Self.FK__Applicati__ID_ty__5165187F">
+            <End Role="Type_application" EntitySet="Type_application" />
+            <End Role="Applications" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Applicati__ID_us__5070F446" Association="Self.FK__Applicati__ID_us__5070F446">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Applications" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Status_ap__ID_ap__6477ECF3" Association="Self.FK__Status_ap__ID_ap__6477ECF3">
+            <End Role="Applications" EntitySet="Applications" />
+            <End Role="Status_application" EntitySet="Status_application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Data_user__ID_ro__4316F928" Association="Self.FK__Data_user__ID_ro__4316F928">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Data_users" EntitySet="Data_users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Data_user__ID_us__4222D4EF" Association="Self.FK__Data_user__ID_us__4222D4EF">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Data_users" EntitySet="Data_users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Equipment__ID_ty__4BAC3F29" Association="Self.FK__Equipment__ID_ty__4BAC3F29">
+            <End Role="Type_equipment" EntitySet="Type_equipment" />
+            <End Role="Equipment" EntitySet="Equipment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Turnover___ID_eq__60A75C0F" Association="Self.FK__Turnover___ID_eq__60A75C0F">
+            <End Role="Equipment" EntitySet="Equipment" />
+            <End Role="Turnover_equipm" EntitySet="Turnover_equipm" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_eq__5DCAEF64" Association="Self.FK__Workplace__ID_eq__5DCAEF64">
+            <End Role="Equipment" EntitySet="Equipment" />
+            <End Role="Workplace_equipment" EntitySet="Workplace_equipment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Status_ap__ID_er__66603565" Association="Self.FK__Status_ap__ID_er__66603565">
+            <End Role="Error_state" EntitySet="Error_state" />
+            <End Role="Status_application" EntitySet="Status_application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Office_ro__ID_of__398D8EEE" Association="Self.FK__Office_ro__ID_of__398D8EEE">
+            <End Role="Offices" EntitySet="Offices" />
+            <End Role="Office_rooms" EntitySet="Office_rooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_of__5629CD9C" Association="Self.FK__Workplace__ID_of__5629CD9C">
+            <End Role="Office_rooms" EntitySet="Office_rooms" />
+            <End Role="Workplace" EntitySet="Workplace" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_so__59FA5E80" Association="Self.FK__Workplace__ID_so__59FA5E80">
+            <End Role="Software" EntitySet="Software" />
+            <End Role="Workplace_software" EntitySet="Workplace_software" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Status_ap__ID_us__656C112C" Association="Self.FK__Status_ap__ID_us__656C112C">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Status_application" EntitySet="Status_application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Turnover___ID_ty__619B8048" Association="Self.FK__Turnover___ID_ty__619B8048">
+            <End Role="Type_turnover" EntitySet="Type_turnover" />
+            <End Role="Turnover_equipm" EntitySet="Turnover_equipm" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_us__5535A963" Association="Self.FK__Workplace__ID_us__5535A963">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Workplace" EntitySet="Workplace" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_wo__59063A47" Association="Self.FK__Workplace__ID_wo__59063A47">
+            <End Role="Workplace" EntitySet="Workplace" />
+            <End Role="Workplace_software" EntitySet="Workplace_software" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Workplace__ID_wo__5CD6CB2B" Association="Self.FK__Workplace__ID_wo__5CD6CB2B">
+            <End Role="Workplace" EntitySet="Workplace" />
+            <End Role="Workplace_equipment" EntitySet="Workplace_equipment" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Model.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Model.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Applications">
+            <EntityTypeMapping TypeName="Model.Applications">
+              <MappingFragment StoreEntitySet="Applications">
+                <ScalarProperty Name="ID_application" ColumnName="ID_application" />
+                <ScalarProperty Name="Date_start" ColumnName="Date_start" />
+                <ScalarProperty Name="Date_finish" ColumnName="Date_finish" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID_user" ColumnName="ID_user" />
+                <ScalarProperty Name="ID_type_application" ColumnName="ID_type_application" />
+                <ScalarProperty Name="ID_error" ColumnName="ID_error" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_users">
+            <EntityTypeMapping TypeName="Model.Data_users">
+              <MappingFragment StoreEntitySet="Data_users">
+                <ScalarProperty Name="id_data_user" ColumnName="id_data_user" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ID_user" ColumnName="ID_user" />
+                <ScalarProperty Name="ID_role_user" ColumnName="ID_role_user" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Equipment">
+            <EntityTypeMapping TypeName="Model.Equipment">
+              <MappingFragment StoreEntitySet="Equipment">
+                <ScalarProperty Name="ID_equipment" ColumnName="ID_equipment" />
+                <ScalarProperty Name="Name_equipment" ColumnName="Name_equipment" />
+                <ScalarProperty Name="Serial_number" ColumnName="Serial_number" />
+                <ScalarProperty Name="ID_type_equipment" ColumnName="ID_type_equipment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Error_state">
+            <EntityTypeMapping TypeName="Model.Error_state">
+              <MappingFragment StoreEntitySet="Error_state">
+                <ScalarProperty Name="ID_error" ColumnName="ID_error" />
+                <ScalarProperty Name="Name_error" ColumnName="Name_error" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Office_rooms">
+            <EntityTypeMapping TypeName="Model.Office_rooms">
+              <MappingFragment StoreEntitySet="Office_rooms">
+                <ScalarProperty Name="ID_office_room" ColumnName="ID_office_room" />
+                <ScalarProperty Name="Cabinet_office" ColumnName="Cabinet_office" />
+                <ScalarProperty Name="ID_office" ColumnName="ID_office" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Offices">
+            <EntityTypeMapping TypeName="Model.Offices">
+              <MappingFragment StoreEntitySet="Offices">
+                <ScalarProperty Name="ID_office" ColumnName="ID_office" />
+                <ScalarProperty Name="Name_office" ColumnName="Name_office" />
+                <ScalarProperty Name="Adress_office" ColumnName="Adress_office" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="Model.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="ID_role_user" ColumnName="ID_role_user" />
+                <ScalarProperty Name="Name_role" ColumnName="Name_role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Software">
+            <EntityTypeMapping TypeName="Model.Software">
+              <MappingFragment StoreEntitySet="Software">
+                <ScalarProperty Name="ID_software" ColumnName="ID_software" />
+                <ScalarProperty Name="Name_software" ColumnName="Name_software" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status_application">
+            <EntityTypeMapping TypeName="Model.Status_application">
+              <MappingFragment StoreEntitySet="Status_application">
+                <ScalarProperty Name="ID_status_application" ColumnName="ID_status_application" />
+                <ScalarProperty Name="Modified_date" ColumnName="Modified_date" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="ID_application" ColumnName="ID_application" />
+                <ScalarProperty Name="ID_user" ColumnName="ID_user" />
+                <ScalarProperty Name="ID_error" ColumnName="ID_error" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Turnover_equipm">
+            <EntityTypeMapping TypeName="Model.Turnover_equipm">
+              <MappingFragment StoreEntitySet="Turnover_equipm">
+                <ScalarProperty Name="ID_turnover_equipm" ColumnName="ID_turnover_equipm" />
+                <ScalarProperty Name="Date_turnover" ColumnName="Date_turnover" />
+                <ScalarProperty Name="Count_equipm" ColumnName="Count_equipm" />
+                <ScalarProperty Name="ID_equipment" ColumnName="ID_equipment" />
+                <ScalarProperty Name="ID_type_turnover" ColumnName="ID_type_turnover" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Type_application">
+            <EntityTypeMapping TypeName="Model.Type_application">
+              <MappingFragment StoreEntitySet="Type_application">
+                <ScalarProperty Name="ID_type_application" ColumnName="ID_type_application" />
+                <ScalarProperty Name="Name_type_application" ColumnName="Name_type_application" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Type_equipment">
+            <EntityTypeMapping TypeName="Model.Type_equipment">
+              <MappingFragment StoreEntitySet="Type_equipment">
+                <ScalarProperty Name="ID_type_equipment" ColumnName="ID_type_equipment" />
+                <ScalarProperty Name="Name_type_equipment" ColumnName="Name_type_equipment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Type_turnover">
+            <EntityTypeMapping TypeName="Model.Type_turnover">
+              <MappingFragment StoreEntitySet="Type_turnover">
+                <ScalarProperty Name="ID_type_turnover" ColumnName="ID_type_turnover" />
+                <ScalarProperty Name="Name_type_turnover" ColumnName="Name_type_turnover" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Model.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ID_user" ColumnName="ID_user" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Workplace">
+            <EntityTypeMapping TypeName="Model.Workplace">
+              <MappingFragment StoreEntitySet="Workplace">
+                <ScalarProperty Name="ID_workplace" ColumnName="ID_workplace" />
+                <ScalarProperty Name="Number_workplace" ColumnName="Number_workplace" />
+                <ScalarProperty Name="ID_user" ColumnName="ID_user" />
+                <ScalarProperty Name="ID_office_room" ColumnName="ID_office_room" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Workplace_equipment">
+            <EntityTypeMapping TypeName="Model.Workplace_equipment">
+              <MappingFragment StoreEntitySet="Workplace_equipment">
+                <ScalarProperty Name="ID_workplace_equipment" ColumnName="ID_workplace_equipment" />
+                <ScalarProperty Name="ID_workplace" ColumnName="ID_workplace" />
+                <ScalarProperty Name="ID_equipment" ColumnName="ID_equipment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Workplace_software">
+            <EntityTypeMapping TypeName="Model.Workplace_software">
+              <MappingFragment StoreEntitySet="Workplace_software">
+                <ScalarProperty Name="ID_workplace_software" ColumnName="ID_workplace_software" />
+                <ScalarProperty Name="ID_workplace" ColumnName="ID_workplace" />
+                <ScalarProperty Name="ID_software" ColumnName="ID_software" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_User">
+            <EntityTypeMapping TypeName="Model.View_User">
+              <MappingFragment StoreEntitySet="View_User">
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name_role" ColumnName="Name_role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище Model.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище Model.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище Model.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище Model.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище Model.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище Model.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище Model.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

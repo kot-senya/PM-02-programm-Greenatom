@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cbaddcea86d045778cb6d2151656ef97" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Applications" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Data_users" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Equipment" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Error_state" Width="1.5" PointX="0.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Office_rooms" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Offices" Width="1.5" PointX="1.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Roles" Width="1.5" PointX="3.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Software" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Status_application" Width="1.5" PointX="8.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Turnover_equipm" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Type_application" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Type_equipment" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Type_turnover" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Users" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Workplace" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Workplace_equipment" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Workplace_software" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.View_User" Width="1.5" PointX="9.75" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__Applicati__ID_er__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Applicati__ID_ty__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Applicati__ID_us__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Status_ap__ID_ap__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Data_user__ID_ro__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Data_user__ID_us__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Equipment__ID_ty__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Turnover___ID_eq__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Workplace__ID_eq__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Status_ap__ID_er__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Office_ro__ID_of__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Workplace__ID_of__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Workplace__ID_so__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Status_ap__ID_us__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Turnover___ID_ty__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Workplace__ID_us__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Workplace__ID_wo__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Workplace__ID_wo__5CD6CB2B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

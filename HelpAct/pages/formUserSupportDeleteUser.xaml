@@ -21,6 +21,33 @@
         <Border BorderThickness="0.5 1 0.5 1" Width="400" Height="450" HorizontalAlignment="Right" CornerRadius="0,15,15,0" BorderBrush="#0E498B" Background="white">
             <Grid>
                 <Button x:Name="bt_close" Margin="0 5 15 0" Style="{StaticResource bt_Close}" Click="bt_close_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <StackPanel Height="375">
+                    <TextBlock Text="Выберите пользователя" FontFamily="{StaticResource Forum}" FontSize="20" Foreground="#0E498B" Width="250"/>
+                    <ComboBox x:Name="cb_role" Loaded="cb_role_Loaded" Text = "{Binding text}"  Style="{StaticResource cb_usually}" Tag="Роль" SelectionChanged="cb_role_SelectionChanged"/>
+                    <ComboBox x:Name="cb_user" Loaded="cb_user_Loaded" Style="{StaticResource cb_usually}" Tag="Пользователь" SelectionChanged = "cb_user_SelectionChanged"/>
+                    <CheckBox x:Name="ckb_clear" Checked="ckb_clear_Checked" Content="Очистить" Margin="0 5 75 0" Width="250" HorizontalAlignment="Right" FlowDirection="RightToLeft">
+                        <CheckBox.Resources>
+                            <Style TargetType="{x:Type Path}">
+                                <Setter Property="FlowDirection" Value="LeftToRight"/>
+                            </Style>
+                        </CheckBox.Resources>
+                    </CheckBox>
+                    <Border x:Name="b_info"  Height="220" Width="250" Margin="0 20 0 0" Visibility="Hidden">
+                        <StackPanel>
+                            <TextBlock Text="Информация о пользователе" FontFamily="{StaticResource Gabriela}" FontSize="15" Foreground="#0E498B"/>
+                            <Border BorderThickness="1" CornerRadius="5" BorderBrush="#0E498B" Margin="0 10 0 0" Height="160">
+                                <StackPanel Margin="10">
+                                    <TextBlock x:Name="tbk_name" Text="Фамилия имя отчетство" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#0E498B" TextWrapping="Wrap" Margin="0 0 0 5"/>
+                                    <TextBlock x:Name="tbk_dateofbirtd" Text="Дата рождения" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#0E498B" TextWrapping="Wrap" Margin="0 0 0 5"/>
+                                    <TextBlock x:Name="tbk_phone" Text="Телефон" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#0E498B" TextWrapping="Wrap" Margin="0 0 0 5"/>
+                                    <TextBlock x:Name="tbk_email" Text="Почта" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#0E498B" TextWrapping="Wrap" Margin="0 0 0 5"/>
+                                    <TextBlock x:Name="tbk_workplace" Text="Место в офисе" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#0E498B" TextWrapping="Wrap" Margin="0 0 0 5"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+                <Button Content="Удалить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom" Margin="25"/>
             </Grid>
         </Border>
     </Grid>

@@ -230,4 +230,96 @@
         </Setter>
 
     </Style>
+
+    <Style x:Key="cb_usually" TargetType="{x:Type ComboBox}">
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Width" Value="250"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontFamily" Value="Gabriela"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Foreground" Value="#0E498B"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 10 0 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+                    <Grid>
+                        <ToggleButton x:Name="ToggleButton"
+                                      Template="{StaticResource ComboBoxToggleButton}"
+                                      Grid.Column="2"
+                                      Focusable="False"
+                                      ClickMode="Press"
+                                      IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        <ContentPresenter x:Name="ContentSite"
+                                          IsHitTestVisible="False"                                          
+                                          Content="{TemplateBinding Text}"
+                                          ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                          ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                          Margin="11 0 25 0"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Left"
+                                          IsEnabled="True"/>
+                        <TextBox x:Name="PART_EditableTextBox"
+                                 Template="{StaticResource ComboBoxTextBox}"
+                                 HorizontalAlignment="Left"
+                                 VerticalAlignment="Center"
+                                 Focusable="True"
+                                 Visibility="Hidden"/>
+                        <Label x:Name="Watermark"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Foreground="#D9D9D9"
+                               Visibility="Collapsed"
+                               Padding="10 0 0 0"
+                               Content="{TemplateBinding Tag}"
+                               FontFamily="Gabriela"
+                               FontSize="15"/>
+                        <Popup x:Name="Popup"
+                               Placement="Bottom"
+                               IsOpen="{TemplateBinding IsDropDownOpen}"
+                               AllowsTransparency="True"
+                               Focusable="False"
+                               PopupAnimation="Slide">
+                            <Grid x:Name="DropDown"
+                                  SnapsToDevicePixels="True"
+                                  MinWidth="{TemplateBinding ActualWidth}"
+                                  MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                <Border x:Name="DropDownBorder"
+                                        BorderThickness="1"                                        
+                                        BorderBrush="#0E498B"
+                                        Background="White"/>
+                                <ScrollViewer Margin="4 6 4 6"
+                                              SnapsToDevicePixels="True"
+                                              OverridesDefaultStyle="True"
+                                              Foreground="#0E498B"
+                                              FontFamily="Forum"
+                                              FontSize="12"/>
+                                <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained">
+                                </StackPanel>
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Text" Value=""/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Visibility" Value="Visible" TargetName="Watermark"/>
+                        </MultiTrigger>
+                        <Trigger Property="HasItems" Value="False">
+                            <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                        </Trigger>
+                        <Trigger Property="IsGrouping" Value="True">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="False"/>
+                        </Trigger>
+                        <Trigger SourceName="Popup" Property="AllowsTransparency" Value="True">
+                            <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="4"/>
+                            <Setter TargetName="DropDownBorder" Property="Margin" Value="0 2 0 0"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
 </ResourceDictionary>
