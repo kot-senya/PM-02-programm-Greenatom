@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace HelpAct
 {
@@ -64,6 +65,15 @@ namespace HelpAct
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void BtnLoadFromFile_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                Uri fileUri = new Uri(openFileDialog.FileName);
+                aImage.Source = new BitmapImage(fileUri);
+            }
         }
     }
 }
