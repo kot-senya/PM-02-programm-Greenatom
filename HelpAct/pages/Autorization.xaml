@@ -5,21 +5,29 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HelpAct"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Autorization" Background="#0E498B">
+      d:DesignHeight="1080" d:DesignWidth="1440"
+      Title="Autorization" Background="#9EB3C2">
 
-    <Grid>
-        <Border Width="430" Height="390" Background="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" >
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="7" Color="#0E3969" Direction="198" Opacity=".6"
-            RenderingBias="Performance" ShadowDepth="60" />
-            </Border.Effect>
+    <Viewbox Stretch="Uniform">
+        <Border Width="1440" Height="1080">
             <StackPanel>
-                <TextBlock Text="Авторизируйтесь" FontSize="26" HorizontalAlignment="Center" Foreground="#0E3969" Margin="0 30 0 0" RenderTransformOrigin="0.492,0.62" FontFamily="{StaticResource Gabriela}"/>
-                <TextBox x:Name="aLogin" Tag="Логин" Width="289" Height="50" Text="" Style="{StaticResource  tbox_Login}"  Margin="25 46 24 0"/>
-                <PasswordBox x:Name="aPass" Password="" Tag="Пароль" Width="289" FontSize="18" Height="50" Style="{StaticResource pbox_Password}" Margin="25 45 24 0" Cursor="IBeam"/>
-                <Button x:Name="bAuth" Width="222" Height="38" Margin="0 43 0 0" Click="bAuth_Click" Content="Вход" FontSize="20" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                <Grid>
+                    <Border HorizontalAlignment="Left" Background="White" Height="736" Margin="606,0,0,0" VerticalAlignment="Center" Width="630" CornerRadius="0,25,25,0"/>
+                    <Image Source="/picture/photo.png" HorizontalAlignment="Left" Margin="203,216,0,216" Width="403" RenderTransformOrigin="0.5,0.5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="288,258,0,0" TextWrapping="Wrap" FontSize="40"  Foreground="White" Text="Log In" VerticalAlignment="Top" FontFamily="{StaticResource Gabriela}"/>
+                    <Rectangle HorizontalAlignment="Left" Fill="#D9D9D9" RadiusX="100" RadiusY="100" Height="163" Margin="840,258,0,0" VerticalAlignment="Top" Width="162"/>
+                    <Button x:Name="bAuth" Width="437" Height="60" Margin="702,715,300,271" Click="bAuth_Click" Content="Login" FontSize="24" Background="#0E498B" Foreground="White" FontFamily="{StaticResource Gabriela}">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="30"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <TextBox x:Name="aLogin" Tag="Login" Width="438" Height="60" Text="" Style="{StaticResource  tbox_Login}"  Margin="702,0,0,0" HorizontalAlignment="Left" RenderTransformOrigin="0.46,0.47" BorderBrush="#7E7E7E"/>
+                    <PasswordBox x:Name="aPass" Password="" Tag="Password" Width="438" FontSize="18" Height="60" Style="{StaticResource pbox_Password}" Margin="702,604,0,0" Cursor="IBeam" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="#7E7E7E"/>
+                    <Border Height="22" Background="#14365A" VerticalAlignment="Top" Width="1440" />
+                </Grid>
             </StackPanel>
         </Border>
-    </Grid>
+    </Viewbox>
 </Page>

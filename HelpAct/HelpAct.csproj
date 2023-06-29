@@ -418,6 +418,7 @@
       <DependentUpon>Base.edmx</DependentUpon>
       <LastGenOutput>Base.cs</LastGenOutput>
     </Content>
+    <Resource Include="picture\bkg_auth_one.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
