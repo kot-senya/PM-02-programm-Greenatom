@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelpAct;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,17 +28,44 @@ namespace HelpAct
 
         private void bAuth_Click(object sender, RoutedEventArgs e)
         {
-            if(aLogin.Text == "1")
+            try
             {
-                NavigationService.Navigate(new uUserMainPage());
+                Users user = new Users();
+                if (checkAutorization.input(aLogin.Text, aPass.Password, out user))
+                {
+                    string roleUser = convert.UserToRoleUser(aLogin.Text, aPass.Password);
+                    switch (roleUser)
+                    {
+                        case ("Обычный пользователь"):
+                            {
+                                NavigationService.Navigate(new uUserMainPage(user));
+                            }
+                            break;
+                        case ("Поддержка пользователей"):
+                            {
+                                NavigationService.Navigate(new uUserSapportMainPage(user));
+                            }
+                            break;
+                        case ("ИТ-актив"):
+                            {
+                                NavigationService.Navigate(new uITactivMainPage(user));
+                            }
+                            break;
+                        default:
+                            {
+                                MessageBox.Show("Возникла ошибка при входе");
+                            }
+                            break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Введенны некорректные данные");
+                }
             }
-            else if(aLogin.Text == "2")
+            catch (Exception ex)
             {
-                NavigationService.Navigate(new uITactivMainPage());
-            }
-            else if(aLogin.Text == "3")
-            {
-                NavigationService.Navigate(new uUserSapportMainPage());
+                MessageBox.Show(ex.Message);
             }
         }
     }

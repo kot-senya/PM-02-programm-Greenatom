@@ -20,14 +20,16 @@ namespace HelpAct
     /// </summary>
     public partial class uITactivSearch : Page
     {
-        public uITactivSearch()
+        Users meme;
+        public uITactivSearch(Users user)
         {
+            meme = user;
             InitializeComponent();
         }
 
         private void mMain_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new uITactivMainPage());
+            NavigationService.Navigate(new uITactivMainPage(meme));
         }
 
         private void mAdd_Click(object sender, RoutedEventArgs e)
@@ -42,7 +44,7 @@ namespace HelpAct
 
         private void mUserProfile_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new uITactivPersonalAccount());
+            NavigationService.Navigate(new uITactivPersonalAccount(meme));
         }
 
         private void tb_info_Loaded(object sender, RoutedEventArgs e)

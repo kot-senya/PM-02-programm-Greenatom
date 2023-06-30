@@ -22,8 +22,10 @@ namespace HelpAct
     /// </summary>
     public partial class uUserMainPage : Page
     {
-        public uUserMainPage()
+        Users meme;
+        public uUserMainPage(Users user)
         {
+            meme = user;
             InitializeComponent();
         }
         private void fullNullVisibility()

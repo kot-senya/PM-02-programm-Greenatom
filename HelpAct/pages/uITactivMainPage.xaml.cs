@@ -20,19 +20,21 @@ namespace HelpAct
     /// </summary>
     public partial class uITactivMainPage : Page
     {
-        public uITactivMainPage()
+        Users meme;
+        public uITactivMainPage(Users user)
         {
+            meme = user;
             InitializeComponent();
         }
 
         private void mUserProfile_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new uITactivPersonalAccount());
+            NavigationService.Navigate(new uITactivPersonalAccount(meme));
         }
 
         private void mSuarch_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new uITactivSearch());
+            NavigationService.Navigate(new uITactivSearch(meme));
         }
 
         private void mAdd_Click(object sender, RoutedEventArgs e)

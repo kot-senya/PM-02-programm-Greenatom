@@ -20,14 +20,16 @@ namespace HelpAct
     /// </summary>
     public partial class uUserSapportMainPage : Page
     {
-        public uUserSapportMainPage()
+        Users meme;
+        public uUserSapportMainPage(Users user)
         {
+            meme = user;
             InitializeComponent();
         }
 
         private void mSuarch_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new uUserSapportSearch());
+            NavigationService.Navigate(new uUserSapportSearch(meme));
         }
 
         private void mAdd_Click(object sender, RoutedEventArgs e)
@@ -47,7 +49,7 @@ namespace HelpAct
 
         private void mUserProfile_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new uUserSapportPersonalAccount());
+            NavigationService.Navigate(new uUserSapportPersonalAccount(meme));
         }
     }
 }
