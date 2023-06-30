@@ -297,4 +297,74 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="tbox_upText" TargetType="{x:Type TextBox}">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontFamily" Value="Forum"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Background" Value="white"/>
+        <Setter Property="Foreground" Value="#D9D9D9"/>
+        <Setter Property="Padding" Value="0 5 5 4"/>
+        <Setter Property="Margin" Value="0 10 0 0"/>
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="VerticalContentAlignment" Value="Top"/>
+        <Setter Property="Cursor" Value="IBeam"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <Grid Margin="{TemplateBinding Padding}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>              
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Border x:Name="TxtBorder"
+                                    BorderBrush="#D9D9D9"
+                                    BorderThickness="1"
+                                    CornerRadius="5"
+                                    SnapsToDevicePixels="True"
+                                    Grid.Row="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                          Focusable="False"
+                                          Grid.Column="1"
+                                          Grid.Row="1"
+                                          Margin="5 0 0 0"
+                                          HorizontalScrollBarVisibility="Hidden"
+                                          VerticalScrollBarVisibility="Hidden"/>
+                            <Label x:Name="Watermark"
+                                   FontFamily="Gabriela"
+                                   FontSize="20"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   Foreground="#D9D9D9"
+                                   Visibility="Visible"
+                                   Padding="5 0 20 0"
+                                   Content="{TemplateBinding Tag}"
+                                   Grid.Column="1"
+                                   Grid.Row="0"/>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#D9D9D9" TargetName="TxtBorder"/>
+                            <Setter Property="Control.Foreground" Value="#0E498B"/>
+                            <Setter Property="Foreground" TargetName="Watermark" Value="#0E498B"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Control.Foreground" Value="#0E498B"/>
+                            <Setter Property="BorderBrush" Value="#0E498B" TargetName="TxtBorder"/>
+                            <Setter Property="BorderThickness" Value="1 1 1 3" TargetName="TxtBorder"/>
+                            <Setter Property="Foreground" TargetName="Watermark" Value="#0E498B"/>
+                        </Trigger>                        
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

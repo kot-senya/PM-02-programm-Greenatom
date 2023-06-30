@@ -78,18 +78,18 @@
             </Grid>
 
 
-            <Grid Grid.Column="1" Visibility="Visible" x:Name="pageUserProfile">
-                <Viewbox Stretch="Uniform" Grid.RowSpan="2">
+            <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageUserProfile">
+                <Viewbox Stretch="Uniform">
                     <Border Width="800" Height="450">
                         <Grid>
                             <Rectangle RadiusX="10" RadiusY="10" Fill="white" />
                             <Image x:Name="aImage" Source="pack://application:,,,/picture/pik_cat_off.jpg" Width="150" Margin="0,0,455,250"/>
                             <Button x:Name="bFile"  Click="BtnLoadFromFile_Click" Width="270" Height="34" Margin="40,0,0 -30"  Content="Изменить фотографию" HorizontalAlignment="Left" FontSize="20" Style="{StaticResource btn_RoundedButtonStyle}"/>
-                            <StackPanel Orientation="Vertical">
-                                <TextBox x:Name ="uFIO"  Style="{StaticResource tbox_forAll}" Tag="Фио" Margin=" 0 10 0 0" Foreground="#0E3969" />
-                                <TextBox x:Name="uBer" Tag="День рождение"  Style="{StaticResource tbox_forAll}" Foreground="#0E3969"  Margin="88,10,0, 0" />
-                                <TextBox x:Name="uPhone" Tag="Телефон"  Style="{StaticResource tbox_forAll}"  Margin="36,10,0, 0" Foreground="#0E3969" MaxLines="12" />
-                                <TextBox x:Name="uEmail" Tag="Почта"  Style="{StaticResource tbox_forAll}"  Margin="20,10,0,0" Foreground="#0E3969"/>
+                            <StackPanel Orientation="Vertical" Margin="65 0 0 0">
+                                <TextBox x:Name ="uFIO"  Style="{StaticResource tbox_forAll}" Tag="Фио" Margin=" 0 10 0 0" Foreground="#0E3969" Width="250"/>
+                                <TextBox x:Name="uBer" Tag="День рождение"  Style="{StaticResource tbox_forAll}" Foreground="#0E3969"  Margin="0,10,0, 0"  Width="250"/>
+                                <TextBox x:Name="uPhone" Tag="Телефон"  Style="{StaticResource tbox_forAll}"  Margin="0,10,0, 0" Foreground="#0E3969" MaxLines="12"  Width="250"/>
+                                <TextBox x:Name="uEmail" Tag="Почта"  Style="{StaticResource tbox_forAll}"  Margin="0,10,0,0" Foreground="#0E3969"  Width="250"/>
                             </StackPanel>
                             <Rectangle Fill="#0E3969"  Height="2" Width="1700" Margin="0,240,-2,128"/>
                             <TextBox x:Name ="uLogin"  Style="{StaticResource tbox_forAll}" Tag="Логин" Margin="131,329,0,0" Foreground="#0E3969" HorizontalAlignment="Left" VerticalAlignment="Top" />
@@ -104,12 +104,28 @@
 
 
             <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageAddRequest" >
-                <TextBox x:Name ="uName"  Style="{StaticResource tbox_forAll}" Tag="Фио" Margin=" 0 -270 0 0" Foreground="#0E3969"  />
-                <Rectangle Fill="#0E3969"  Height="2" Width="1700" Margin="0,-90,-2,128"/>
-                <TextBox x:Name="uEror" Tag="Описание ошибки"  Style="{StaticResource tbox_forAll}"  Margin="10,-90,0,0" Foreground="#0E3969" TextWrapping="Wrap"/>
-                <Button x:Name="bSend" Width="222" Height="38" Margin="0 450 0 0"  Content="Отправить" FontSize="20" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                <Viewbox Stretch="Uniform"  Grid.RowSpan="2">
+                    <Border  Width="800" Height="575">
+                        <Grid>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Vertical" Margin="45 0 45 0">
+                                    <TextBox x:Name ="tbx_Surname"  Style="{StaticResource tbox_forAll}" Tag="Фамилия" Width="250" ToolTip="Фамилия"/>
+                                    <TextBox x:Name ="tbx_Name"  Style="{StaticResource tbox_forAll}" Tag="Имя" Width="250" ToolTip="Имя"/>
+                                    <TextBox x:Name ="tbx_Patronymic"  Style="{StaticResource tbox_forAll}" Tag="Отчество" Width="250" ToolTip="Отчество"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="5 0 5 0">
+                                    <TextBox x:Name ="tbx_Room"  Style="{StaticResource tbox_forAll}" Tag="Кабинет" Width="250" ToolTip="Кабинет"/>
+                                    <TextBox x:Name ="tbx_Workplace"  Style="{StaticResource tbox_forAll}" Tag="Рабочее место" Width="250" ToolTip="Рабочее место"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <Rectangle Fill="#0E3969"  Height="2" Width="1700" Margin="0,-90,-2,128"/>
+                            <TextBox x:Name="txt_Description" Tag="Описание ошибки"  Style="{StaticResource tbox_upText}" Width="560" Height="250" Margin="45,70,0,0" TextWrapping="Wrap" HorizontalAlignment="Left"/>
+                            <Button x:Name="bSend" Width="222" Height="38" Margin="0 450 0 0"  Content="Отправить" FontSize="20" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                        </Grid>
+                    </Border>
+                </Viewbox>
             </Grid>
-            
+
             <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageAllRequest">
                 <Button Content="4 страница"/>
 
