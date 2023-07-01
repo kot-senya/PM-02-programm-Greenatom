@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -55,6 +56,20 @@ namespace HelpAct
         private void mExit_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Autorization());
+        }
+        private void BtnLoadFromFile_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                Uri fileUri = new Uri(openFileDialog.FileName);
+                aImage.Source = new BitmapImage(fileUri);
+            }
+        }
+
+        private void uEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
