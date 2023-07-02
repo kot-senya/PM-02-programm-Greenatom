@@ -11,6 +11,7 @@ namespace UnitTest
         public void TestMethod1()
         {
             Users user = new Users();
+            Assert.IsTrue(checkAutorization.input("АсташинИФ", "", out user));
         }
     }
 }
