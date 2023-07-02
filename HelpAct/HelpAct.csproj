@@ -199,10 +199,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="pages\uUserPersonalAccount.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="pages\uUserSapportMainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -303,9 +299,6 @@
     </Compile>
     <Compile Include="pages\uUserMainPage.xaml.cs">
       <DependentUpon>uUserMainPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="pages\uUserPersonalAccount.xaml.cs">
-      <DependentUpon>uUserPersonalAccount.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\uUserSapportMainPage.xaml.cs">
       <DependentUpon>uUserSapportMainPage.xaml</DependentUpon>
