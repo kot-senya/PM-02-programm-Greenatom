@@ -62,12 +62,8 @@ namespace HelpAct
                 //выборка данных
                 string name_role = (sender as ComboBox).SelectedItem as string;
                 List<Roles> r = Connect.DataBase.Roles.ToList().Where(tb => tb.Name_role == name_role).ToList();
-                if (r.Count == 0)
-                {
-
-                }
-                else
-                {
+                if (r.Count > 0)
+                { 
                     List<Data_users> id = Connect.DataBase.Data_users.ToList().Where(tb => tb.ID_role_user == r[0].ID_role_user).ToList();
                     List<Users> users = Connect.DataBase.Users.ToList();
                     List<String> s = new List<string>();

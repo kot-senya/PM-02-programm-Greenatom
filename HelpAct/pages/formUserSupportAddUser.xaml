@@ -24,31 +24,29 @@
                 <TabControl Style="{StaticResource tbc_RoundedTabControlStyle}" Height="360" Width="320" BorderThickness="0">
                     <TabItem Header="Личные данные" Style="{StaticResource tbi_RoundedTabItemStyle}">
                         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBox Style="{StaticResource tbox_forAll}" Tag="Фамилия" Height="35" Width="310"/>
-                            <TextBox Style="{StaticResource tbox_forAll}" Tag="Имя" Height="35" Width="310"/>
-                            <TextBox Style="{StaticResource tbox_forAll}" Tag="Отчество" Height="35" Width="310"/>
-                            <DatePicker Style="{StaticResource DatePickerStyle}" Tag="Дата рождения" Width="310"/>
-                            <TextBox Style="{StaticResource tbox_forAll}" Tag="Телефон" Height="35" Width="310"/>
-                            <TextBox Style="{StaticResource tbox_forAll}" Tag="Почта" Height="35" Width="310"/>                           
+                            <TextBox x:Name="tbx_Surname" Style="{StaticResource tbox_forAll}" Tag="Фамилия" Height="35" Width="310"/>
+                            <TextBox x:Name="tbx_Name" Style="{StaticResource tbox_forAll}" Tag="Имя" Height="35" Width="310"/>
+                            <TextBox x:Name="tbx_Patronymic" Style="{StaticResource tbox_forAll}" Tag="Отчество" Height="35" Width="310"/>
+                            <DatePicker x:Name="dp_DB" Style="{StaticResource DatePickerStyle}" Tag="Дата рождения" Width="310"/>
+                            <TextBox x:Name="txt_phone" Style="{StaticResource tbox_forAll}" Tag="Телефон" Height="35" Width="310"/>
+                            <TextBox x:Name="txt_email" Style="{StaticResource tbox_forAll}" Tag="Почта" Height="35" Width="310"/>                           
                         </StackPanel>
                     </TabItem>
                     <TabItem Header="Рабочие моменты" Style="{StaticResource tbi_RoundedTabItemStyle}">
                         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
-                             <ComboBox Style="{StaticResource cb_main}" Tag="Офис" Width="310"/>
+                            <ComboBox x:Name="cb_roles" Text="{Binding role}" Style="{StaticResource cb_usually}" Tag="Роль" Width="310" Loaded="cb_roles_Loaded"/>
+                            <ComboBox x:Name="cb_offices" Style="{StaticResource cb_usually}" Tag="Офис" Width="310" Loaded="cb_offices_Loaded" SelectionChanged="cb_offices_SelectionChanged"/>
                             <StackPanel Orientation="Horizontal">
-                                <ComboBox Style="{StaticResource cb_main}" Tag="Кабинет" Margin="0 10 10 10" Width="130"/>
-                                <ComboBox Style="{StaticResource cb_main}" Tag="Рабочее место" Margin="0 10 0 10" Width="170"/>
+                                <ComboBox x:Name="cb_workplace" Style="{StaticResource cb_usually}" Tag="Кабинет" Margin="0 10 10 10" Width="130" IsEnabled="False" SelectionChanged="cb_workplace_SelectionChanged"/>
+                                <ComboBox x:Name="cb_work" Style="{StaticResource  cb_usually}" Tag="Рабочее место" Margin="0 10 0 10" Width="170" IsEnabled="False"/>
                             </StackPanel>
-                            <CheckBox Content="Документ о выдаче техники" IsChecked="True"/>
+                            <CheckBox x:Name="ckb_need" Content="Документ о выдаче техники" IsChecked="True"/>
                         </StackPanel>
                     </TabItem>
                 </TabControl>
-                <Button x:Name="bt_add" Margin="0 0 0 15" Height="30" Width="150" Content="Добавить" Style="{StaticResource btn_RoundedButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <Button x:Name="bt_add" Click="bt_add_Click" Margin="0 0 0 15" Height="30" Width="150" Content="Добавить" Style="{StaticResource btn_RoundedButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
 
             </Grid>
         </Border>
-
-
-
     </Grid>
 </Window>

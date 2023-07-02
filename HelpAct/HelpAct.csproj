@@ -90,6 +90,7 @@
       <DependentUpon>Base.edmx</DependentUpon>
     </Compile>
     <Compile Include="Classes\checkAutorization.cs" />
+    <Compile Include="Classes\checkRegestration.cs" />
     <Compile Include="Classes\convert.cs" />
     <Compile Include="Classes\DataBaseConnect.cs" />
     <Compile Include="Data_users.cs">
