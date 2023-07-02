@@ -26,8 +26,15 @@ namespace HelpAct
         {
             meme = user;
             InitializeComponent();
+            initUser();
         }
-
+        private void initUser()
+        {
+            txt_FIO.Text = meme.Surname + " " + meme.Name + " " + meme.Patronymic;
+            txt_db.Text = Convert.ToString(meme.Birthday).Split(' ')[0];
+            txt_Email.Text = meme.Email;
+            txt_phonr.Text = meme.Phone;
+        }
         private void mMain_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new uUserSapportMainPage(meme));

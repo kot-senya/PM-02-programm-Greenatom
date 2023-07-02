@@ -37,24 +37,17 @@
                                 <TextBlock HorizontalAlignment="Left" Margin="250,143,0,0" TextWrapping="Wrap" Text="ДР:" VerticalAlignment="Top" FontFamily="Forum" FontSize="18" RenderTransformOrigin="0.514,0.22" Width="377" Foreground="#FFC7C7C7"/>
                                 <TextBlock HorizontalAlignment="Left" Margin="250,193,0,0" TextWrapping="Wrap" Text="Телефон:" VerticalAlignment="Top" FontFamily="Forum" FontSize="18" RenderTransformOrigin="0.514,0.22" Width="377" Foreground="#FFC7C7C7"/>
                                 <TextBlock HorizontalAlignment="Left" Margin="250,243,0,0" TextWrapping="Wrap" Text="Почта:" VerticalAlignment="Top" FontFamily="Forum" FontSize="18" RenderTransformOrigin="0.514,0.22" Width="377" Foreground="#FFC7C7C7"/>
-                                <TextBlock x:Name ="uFIO"  Tag="Фио" Margin="250,228,173,148" Height="35" Cursor=""   />
+
+                                <TextBlock x:Name ="txt_FIO"   Margin="336,96,174,299" Height="35" Width="290" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#FFC7C7C7"/>
+                                <TextBlock x:Name ="txt_db"    Margin="336,147,174,248" Height="35" Width="290" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#FFC7C7C7"/>
+                                <TextBlock x:Name ="txt_Email" Margin="336,198,174,197" Height="35" Width="290" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#FFC7C7C7"/>
+                                <TextBlock x:Name ="txt_phonr" Margin="336,246,174,149" Height="35" Width="290" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#FFC7C7C7"/>
+
                                 <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,212,0,0"  />
-                                <TextBlock x:Name ="uBer" Tag="День рождение" Margin="250,78,173,298" Height="35"   />
                                 <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,162,0,0" />
-                                <TextBlock x:Name ="uPhone" Tag="Телефон" Margin="250,128,173,248" Height="35"   />
                                 <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,112,0,0" />
-                                <TextBlock x:Name ="uEmail" Tag="Почта" Margin="250,178,173,198" Height="35"   />
                                 <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,262,0,0" />
-                                
 
-                                <!-- <TextBox x:Name ="uFIO"  Style="{StaticResource tbox_forAll}" Tag="Фио" Foreground="#0E3969" Width="361" Margin="110,10,0,0"/>
-                                    <TextBox x:Name="uBer" Tag="День рождение"  Style="{StaticResource tbox_forAll}"  Foreground="#0E3969"  Margin="110,10,0,0"  Width="361"/>
-                                    <TextBox x:Name="uPhone" Tag="Телефон"  Style="{StaticResource tbox_forAll}"  Margin="110,10,0,0" Foreground="#0E3969" MaxLines="12"  Width="361"/>
-                                    <TextBox x:Name="uEmail" Tag="Почта"  Style="{StaticResource tbox_forAll}"  Margin="110,10,0,0" Foreground="#0E3969"  Width="361"/>-->
-
-                                <TextBox x:Name ="uLogin"  Style="{StaticResource tbox_forAll}" Tag="Логин" Margin="250,281,0,0" Foreground="#0E3969" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                                <TextBox x:Name="uPass" Tag="Пароль"  Style="{StaticResource tbox_forAll}"  Margin="347,281,0,0" Foreground="#0E3969" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                                <!-- <TextBox x:Name="uPass1" Tag="Повторите пароль"  Style="{StaticResource tbox_forAll}"  Margin="458,281,173,0" Foreground="#0E3969" HorizontalAlignment="Stretch" VerticalAlignment="Top" /> -->
                                 <Button x:Name="bChange"  Width="201" Margin="542,337,0,38"  Content="Изменить Данные" HorizontalAlignment="Left" FontSize="18" Style="{StaticResource btn_RoundedButtonStyle}"/>
                             </Grid>
                         </Border>
