@@ -28,5 +28,30 @@ namespace HelpAct
         {
             this.Close();
         }
+
+        private void cbx_type_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_newSerial_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void dg_info_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_end_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_addT_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

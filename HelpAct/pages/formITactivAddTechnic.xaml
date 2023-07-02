@@ -24,23 +24,28 @@
                 <TabControl Style="{StaticResource tbc_RoundedTabControlStyle}" Height="360" Width="320" BorderThickness="0">
                     <TabItem Header="Общие сведения" Style="{StaticResource tbi_RoundedTabItemStyle}">
                         <Grid>
-                            <DataGrid Height="270" VerticalAlignment="Top"
+                            <DataGrid x:Name="dg_info" Loaded="dg_info_Loaded"
+                                      Height="270" VerticalAlignment="Top"
                                       VerticalGridLinesBrush="#0E498B" HorizontalGridLinesBrush="#0E498B">
                                 <DataGrid.Columns>
-                                    
+                                    <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="*"/>
+                                    <DataGridTextColumn Header="Количество" Binding="{Binding Count}" Width="*"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <Button Content="Закончить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
+                            <Button x:Name="btn_end" Click="btn_end_Click"  Content="Закончить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Добавить" Style="{StaticResource tbi_RoundedTabItemStyle}">
                         <Grid>
                             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
-                                <TextBox Style="{StaticResource tbox_forAll}" Tag="Название" Height="35" Width="310"/>
-                                <ComboBox Style="{StaticResource cb_main}" Tag="Тип" Width="310"/>
-                                <TextBox Style="{StaticResource tbox_forAll}" Tag="Количество" Height="35" Width="310"/>
+                                <ComboBox x:Name="cbx_type" Loaded="cbx_type_Loaded" Style="{StaticResource cb_main}" Tag="Тип" Width="310"/>
+                                <TextBox x:Name="txt_name" Style="{StaticResource tbox_forAll}" Tag="Название" Height="35" Width="310"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBox x:Name="txt_serial" Style="{StaticResource tbox_forAll}" Tag="Серийный номер" IsEnabled="False" Height="35" Width="250" Margin="0 10 0 10"/>
+                                    <Button x:Name="btn_newSerial" Click="btn_newSerial_Click" ToolTip="Сгенерировать серийный номер" Style="{StaticResource bt_Load}" Margin="25 0 0 0"/>
+                                </StackPanel>
                             </StackPanel>
-                            <Button Content="Добавить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
+                            <Button x:Name="btn_addT" Click="btn_addT_Click" Content="Добавить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
                         </Grid>
 
                     </TabItem>
