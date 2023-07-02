@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using HelpAct;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace UnitTest
@@ -9,6 +10,7 @@ namespace UnitTest
         [TestMethod]
         public void TestMethod1()
         {
+            Users user = new Users();
         }
     }
 }
