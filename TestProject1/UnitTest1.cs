@@ -21,7 +21,7 @@ namespace TestProject1
                 Assert.DoesNotContain(en.Password, en.Login);
             }
             [Fact]
-            public void PasswordLoginTest()
+            public void NameSoftwareTest()
             {
                 Software en = new Software();
                 en.Name_software = "Skype";
