@@ -73,8 +73,9 @@
             <Grid Grid.Column="1" Visibility="Visible" x:Name="pageMain">
 
                 <Viewbox Stretch="Uniform">
-                    <Border Width="800" Height="450">
-                        <Grid>
+                    <Border Width="800" MinHeight="450">
+                        <ScrollViewer>
+                           <Grid>
                             <TextBlock Text="Важная информация для сотрудников отдела" FontSize="30" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="749" Margin="52,-74,0,0" TextWrapping="Wrap"/>
                             <Image x:Name="aImage2" Source="pack://application:,,,/picture/pik_p.png" Margin="46,-18,42,302"/>
                             <TextBlock Text="01" FontSize="30" FontFamily="{StaticResource Gabriela}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="132,41,0,0" TextWrapping="Wrap"/>
@@ -85,9 +86,8 @@
                             <Image x:Name="aImage4" Source="pack://application:,,,/picture/pik_b.png" Margin="40,366,40,-82" RenderTransformOrigin="0.5,0.511"/>
                             <TextBlock Text="Бухгалтерский и налоговый учет " FontSize="30" FontFamily="{StaticResource Gabriela}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="444" Margin="235,430,0,0" TextWrapping="Wrap"/>
                             <TextBlock Text="03" FontSize="30" FontFamily="{StaticResource Gabriela}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="132,430,0,0" TextWrapping="Wrap"/>
-                        </Grid>
-
-
+                        </Grid> 
+                        </ScrollViewer>      
                     </Border>
                 </Viewbox>
             </Grid>

@@ -47,7 +47,7 @@
                         </StackPanel>
                     </Border>
                 </StackPanel>
-                <Button Content="Удалить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom" Margin="25"/>
+                <Button x:Name="btn_del" Click="btn_del_Click"  Content="Удалить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom" Margin="25"/>
             </Grid>
         </Border>
     </Grid>

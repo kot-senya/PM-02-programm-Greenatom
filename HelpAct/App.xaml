@@ -10,16 +10,16 @@
             <ResourceDictionary.MergedDictionaries>
 
                 <ResourceDictionary Source="Styles/ButtonStyle.xaml"/>
-                <ResourceDictionary Source="Styles/TabControlStyle.xaml"/>
-                <ResourceDictionary Source="Styles/TextBoxStyle.xaml"/>
-                <ResourceDictionary Source="Styles/PasswordBoxStyle.xaml"/>
-                <ResourceDictionary Source="Styles/MenuStyle.xaml"/>
-                <ResourceDictionary Source="Styles/MenuUserStyle.xaml"/>
+                <ResourceDictionary Source="Styles/CheckBoxStyle.xaml"/>
                 <ResourceDictionary Source="Styles/ComboBoxStyle.xaml"/>
                 <ResourceDictionary Source="Styles/DataGridStyle.xaml"/>
-                <ResourceDictionary Source="Styles/ScrollBarStyle.xaml"/>
                 <ResourceDictionary Source="Styles/DataPickerStyle.xaml"/>
-                <ResourceDictionary Source="Styles/CheckBoxStyle.xaml"/>
+                <ResourceDictionary Source="Styles/MenuStyle.xaml"/>
+                <ResourceDictionary Source="Styles/MenuUserStyle.xaml"/>
+                <ResourceDictionary Source="Styles/PasswordBoxStyle.xaml"/>
+                <ResourceDictionary Source="Styles/ScrollBarStyle.xaml"/>
+                <ResourceDictionary Source="Styles/TabControlStyle.xaml"/>
+                <ResourceDictionary Source="Styles/TextBoxStyle.xaml"/>
                 
             </ResourceDictionary.MergedDictionaries>
 

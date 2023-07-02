@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +23,7 @@ namespace HelpAct
     /// </summary>
     public partial class formUserSupportDeleteUser : Window
     {
+        Users user = null;
         public formUserSupportDeleteUser()
         {
             InitializeComponent();
@@ -63,7 +66,7 @@ namespace HelpAct
                 string name_role = (sender as ComboBox).SelectedItem as string;
                 List<Roles> r = Connect.DataBase.Roles.ToList().Where(tb => tb.Name_role == name_role).ToList();
                 if (r.Count > 0)
-                { 
+                {
                     List<Data_users> id = Connect.DataBase.Data_users.ToList().Where(tb => tb.ID_role_user == r[0].ID_role_user).ToList();
                     List<Users> users = Connect.DataBase.Users.ToList();
                     List<String> s = new List<string>();
@@ -88,8 +91,6 @@ namespace HelpAct
             {
                 MessageBox.Show(ex.Message);
             }
-
-
         }
 
         //обработка изменения пользователя
@@ -124,11 +125,22 @@ namespace HelpAct
 
                     string[] uname = Convert.ToString((sender as ComboBox).SelectedItem).Split(' ');
                     List<View_User> list = Connect.DataBase.View_User.ToList().Where(tb => tb.Surname == uname[0] && tb.Name == uname[1] && tb.Patronymic == uname[2]).ToList();
+                    List<Users> list2 = Connect.DataBase.Users.ToList().Where(tb => tb.Surname == uname[0] && tb.Name == uname[1] && tb.Patronymic == uname[2]).ToList();
+                    user = list2[0];
+                    string work;
+                    try
+                    {
+                        work = convert.UserToWorkplase(list2[0]);
+                    }
+                    catch
+                    {
+                        work = "";
+                    }
                     tbk_name.Text = Convert.ToString((sender as ComboBox).SelectedItem);
                     tbk_dateofbirtd.Text = Convert.ToString(list[0].Birthday).Split(' ')[0];
                     tbk_phone.Text = list[0].Phone;
                     tbk_email.Text = list[0].Email;
-                    tbk_workplace.Text = "";
+                    tbk_workplace.Text = work.ToString();
                 }
             }
             catch (Exception ex)
@@ -145,6 +157,36 @@ namespace HelpAct
             b_info.Visibility = Visibility.Hidden;
             cb_user_Loaded(null, null);
             ckb_clear.IsChecked = false;
+        }
+
+        private void btn_del_Click(object sender, RoutedEventArgs e)
+        {
+            if (user != null)
+            {
+                try
+                {
+                    Workplace work = Connect.DataBase.Workplace.ToList().Where(tb => tb.ID_user == user.ID_user).ToList()[0];
+                    List<Data_users> logins = Connect.DataBase.Data_users.ToList().Where(tb => tb.ID_user == user.ID_user).ToList();
+
+                    work.ID_user = null;
+                    Connect.DataBase.Workplace.AddOrUpdate(work);
+                    for (int i = 0; i < logins.Count; i++)
+                    {
+                        Connect.DataBase.Data_users.Remove(logins[0]);
+                    }
+                    Connect.DataBase.SaveChanges();
+                    Connect.DataBase = new Entities();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Забыли выбрать что удалить");
+            }
         }
     }
 }

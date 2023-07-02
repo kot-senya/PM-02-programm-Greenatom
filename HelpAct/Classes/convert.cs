@@ -49,6 +49,21 @@ namespace HelpAct
             return role;
         }
 
+        public static string UserToWorkplase(Users user)
+        {
+            string work = "";
+
+            Workplace workplace = Connect.DataBase.Workplace.ToList().Where(tb => tb.ID_user == user.ID_user).ToList()[0];
+            Office_rooms cabinet = Connect.DataBase.Office_rooms.ToList().Where(tb => tb.ID_office_room == workplace.ID_office_room).ToList()[0];
+            Offices offices = Connect.DataBase.Offices.ToList().Where(tb => tb.ID_office == cabinet.ID_office).ToList()[0];
+
+            if(workplace.Number_workplace != "" && cabinet.Cabinet_office != "" && offices.Adress_office != "")
+            {
+                work = cabinet.Cabinet_office + " - " + workplace.Number_workplace + "\n" + offices.Name_office + "\n" + offices.Adress_office;
+            }
+
+            return work;
+        }
         public static int roleToID(string role)
         {
             int id = 0;
