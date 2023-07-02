@@ -19,8 +19,8 @@
                         <Image Source="pack://application:,,,/picture/ic_logo_corp.png" SnapsToDevicePixels="True"/>
                     </Border>
                     <Button x:Name="bAuth" Width="437" Height="60" Margin="702,715,300,271" Click="bAuth_Click" Content="Login" FontSize="25" Style="{StaticResource btn_RoundedButtonStyle}" FontFamily="{StaticResource Gabriela}"/>
-                    <TextBox x:Name="aLogin" FontSize="20" Tag="Login" Width="438" Height="60" Text="" Style="{StaticResource  tbox_Login}"  Margin="702,0,0,0" HorizontalAlignment="Left" RenderTransformOrigin="0.46,0.47" BorderBrush="#7E7E7E"/>
-                    <PasswordBox x:Name="aPass" Password="" Tag="Password" Width="438" FontSize="20" Height="60" Style="{StaticResource pbox_Password}" Margin="702,604,0,0" Cursor="IBeam" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="#7E7E7E"/>
+                    <TextBox x:Name="aLogin" FontSize="25" Tag="Login" Width="438" Height="60" Text="" Style="{StaticResource  tbox_Login}"  Margin="702,0,0,0" HorizontalAlignment="Left" RenderTransformOrigin="0.46,0.47" BorderBrush="#7E7E7E"/>
+                    <PasswordBox x:Name="aPass" Password="" Tag="Password" Width="438" FontSize="18" Height="60" Style="{StaticResource pbox_Password}" Margin="702,604,0,0" Cursor="IBeam" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="#7E7E7E"/>
                     <Border Height="22" Background="#14365A" VerticalAlignment="Top" Width="1440" />
                 </Grid>
             </StackPanel>

@@ -70,8 +70,26 @@
                 <RadioButton x:Name="mExit" Click="mExit_Click" Style="{StaticResource menuButton_Exit}" Content="Выход" Tag ="{StaticResource colors}" VerticalAlignment="Bottom"/>
             </Grid>
 
-            <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageMain">
-                <Button Content="1 страница" Click="Button_Click"/>
+            <Grid Grid.Column="1" Visibility="Visible" x:Name="pageMain">
+
+                <Viewbox Stretch="Uniform">
+                    <Border Width="800" Height="450">
+                        <Grid>
+                            <TextBlock Text="Важная информация для сотрудников отдела" FontSize="30" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="749" Margin="52,-74,0,0" TextWrapping="Wrap"/>
+                            <Image x:Name="aImage2" Source="pack://application:,,,/picture/pik_p.png" Margin="46,-18,42,302"/>
+                            <TextBlock Text="01" FontSize="30" FontFamily="{StaticResource Gabriela}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="132,41,0,0" TextWrapping="Wrap"/>
+                            <TextBlock Text="Управление персоналом" FontSize="30" FontFamily="{StaticResource Gabriela}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="402" Margin="226,41,0,0" TextWrapping="Wrap"/>
+                            <Image x:Name="aImage3" Source="pack://application:,,,/picture/pik_it.png" Margin="44,174,44,111"/>
+                            <TextBlock Text="ИТ- поддержка" FontSize="30" FontFamily="{StaticResource Gabriela}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="402" Margin="302,237,0,0" TextWrapping="Wrap"/>
+                            <TextBlock Text="02" FontSize="30" FontFamily="{StaticResource Gabriela}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="132,237,0,0" TextWrapping="Wrap"/>
+                            <Image x:Name="aImage4" Source="pack://application:,,,/picture/pik_b.png" Margin="40,366,40,-82" RenderTransformOrigin="0.5,0.511"/>
+                            <TextBlock Text="Бухгалтерский и налоговый учет " FontSize="30" FontFamily="{StaticResource Gabriela}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="444" Margin="235,430,0,0" TextWrapping="Wrap"/>
+                            <TextBlock Text="03" FontSize="30" FontFamily="{StaticResource Gabriela}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="132,430,0,0" TextWrapping="Wrap"/>
+                        </Grid>
+
+
+                    </Border>
+                </Viewbox>
             </Grid>
 
             <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="170" Width="128" Margin="30,-213,0,0">
@@ -82,21 +100,28 @@
                 <Viewbox Stretch="Uniform">
                     <Border Width="800" Height="450">
                         <Grid>
-                            <Rectangle RadiusX="10" RadiusY="10" Fill="white" />
-                            <Image x:Name="aImage" Source="pack://application:,,,/picture/pik_cat_off.jpg" Width="150" Margin="0,0,455,250"/>
-                            <Button x:Name="bFile"  Click="BtnLoadFromFile_Click" Width="270" Height="34" Margin="40,0,0 -30"  Content="Изменить фотографию" HorizontalAlignment="Left" FontSize="20" Style="{StaticResource btn_RoundedButtonStyle}"/>
-                            <StackPanel Orientation="Vertical" Margin="65 0 0 0">
-                                <TextBox x:Name ="uFIO"  Style="{StaticResource tbox_forAll}" Tag="Фио" Margin=" 0 10 0 0" Foreground="#0E3969" Width="250"/>
-                                <TextBox x:Name="uBer" Tag="День рождение"  Style="{StaticResource tbox_forAll}" Foreground="#0E3969"  Margin="0,10,0, 0"  Width="250"/>
-                                <TextBox x:Name="uPhone" Tag="Телефон"  Style="{StaticResource tbox_forAll}"  Margin="0,10,0, 0" Foreground="#0E3969" MaxLines="12"  Width="250"/>
-                                <TextBox x:Name="uEmail" Tag="Почта"  Style="{StaticResource tbox_forAll}"  Margin="0,10,0,0" Foreground="#0E3969"  Width="250"/>
-                            </StackPanel>
-                            <Rectangle Fill="#0E3969"  Height="2" Width="1700" Margin="0,240,-2,128"/>
-                            <TextBox x:Name ="uLogin"  Style="{StaticResource tbox_forAll}" Tag="Логин" Margin="131,329,0,0" Foreground="#0E3969" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                            <TextBox x:Name="uPass" Tag="Пароль"  Style="{StaticResource tbox_forAll}"  Margin="313,329,0,0" Foreground="#0E3969" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                            <TextBox x:Name="uPass1" Tag="Повторите пароль"  Style="{StaticResource tbox_forAll}"  Margin="500,329,131,0" Foreground="#0E3969" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
-                            <Button x:Name="bChange"  Width="222" Height="38" Margin="149,390,177,10"  Content="Изменить Данные" HorizontalAlignment="Center" FontSize="20" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                            <Grid Margin="0,20,0,20">
+                                <Rectangle RadiusX="10" RadiusY="10" Fill="#FFF9F9F9" Margin="20,10,20,10" />
+                                <Image x:Name="aImage" Source="pack://application:,,,/picture/pik_cat_off.jpg" Margin="49,105,603,147"/>
+                                <Button x:Name="bFile"  Click="BtnLoadFromFile_Click" Width="118" Margin="64,277,0,101"  Content="Изменить" HorizontalAlignment="Left" FontSize="18" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="250,93,0,0" TextWrapping="Wrap" Text="ФИО:" VerticalAlignment="Top" FontFamily="Forum" FontSize="18" RenderTransformOrigin="0.514,0.22" RenderOptions.BitmapScalingMode="Fant" Width="377" Foreground="#FFC7C7C7"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="250,143,0,0" TextWrapping="Wrap" Text="ДР:" VerticalAlignment="Top" FontFamily="Forum" FontSize="18" RenderTransformOrigin="0.514,0.22" Width="377" Foreground="#FFC7C7C7"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="250,193,0,0" TextWrapping="Wrap" Text="Телефон:" VerticalAlignment="Top" FontFamily="Forum" FontSize="18" RenderTransformOrigin="0.514,0.22" Width="377" Foreground="#FFC7C7C7"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="250,243,0,0" TextWrapping="Wrap" Text="Почта:" VerticalAlignment="Top" FontFamily="Forum" FontSize="18" RenderTransformOrigin="0.514,0.22" Width="377" Foreground="#FFC7C7C7"/>
+                                <TextBlock x:Name ="uFIO"  Tag="Фио" Margin="250,228,173,148" Height="35" Cursor=""   />
+                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,212,0,0"  />
+                                <TextBlock x:Name ="uBer" Tag="День рождение" Margin="250,78,173,298" Height="35"   />
+                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,162,0,0" />
+                                <TextBlock x:Name ="uPhone" Tag="Телефон" Margin="250,128,173,248" Height="35"   />
+                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,112,0,0" />
+                                <TextBlock x:Name ="uEmail" Tag="Почта" Margin="250,178,173,198" Height="35"   />
+                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,262,0,0" />
 
+                                <Rectangle Fill="#0E3969"  Height="2" Width="1700" Margin="0,240,-2,128"/>
+                                <TextBox x:Name ="uLogin"  Style="{StaticResource tbox_forAll}" Tag="Логин" Margin="250,281,0,0" Foreground="#0E3969" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <TextBox x:Name="uPass" Tag="Пароль"  Style="{StaticResource tbox_forAll}"  Margin="347,281,0,0" Foreground="#0E3969" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Button x:Name="bChange"  Width="201" Margin="542,337,0,38"  Content="Изменить Данные" HorizontalAlignment="Left" FontSize="18" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                            </Grid>
                         </Grid>
                     </Border>
                 </Viewbox>
@@ -127,7 +152,26 @@
             </Grid>
 
             <Grid Grid.Column="1" Visibility="Hidden" x:Name="pageAllRequest">
-                <Button Content="4 страница"/>
+                <Viewbox Stretch="Uniform">
+                    <Border Width="800" Height="450">
+                        <Grid>
+                            <ListBox>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Width="759">
+                                            <Rectangle Fill="#D9D9D9" Opacity="0.15" RadiusX="10" RadiusY="10"/>
+                                            <TextBlock x:Name="aId" Text="id" Visibility="Collapsed"/>
+                                            <StackPanel Margin="7" Orientation="Vertical">
+                                                <TextBlock x:Name="aDate" Text="Дата" FontSize="13" Margin="0 0 0 5" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B"/>
+                                                <TextBlock x:Name="aDescription" FontSize="10" TextWrapping="Wrap" FontFamily="{StaticResource Gabriela}" Foreground="#0E498B" Text="Описание"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Grid>
+                    </Border>
+                </Viewbox>
 
             </Grid>
         </Grid>
