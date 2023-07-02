@@ -22,24 +22,26 @@
             <Grid>
                 <Button x:Name="bt_close" Margin="0 5 15 0" Style="{StaticResource bt_Close}" Click="bt_close_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
                 <TabControl Style="{StaticResource tbc_RoundedTabControlStyle}" Height="360" Width="320" BorderThickness="0">
-                    <TabItem Header="Общие сведения" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                    <TabItem x:Name="dg_info" Header="Общие сведения" Style="{StaticResource tbi_RoundedTabItemStyle}">
                         <Grid>
                             <DataGrid Height="270" VerticalAlignment="Top"
                                       VerticalGridLinesBrush="#0E498B" HorizontalGridLinesBrush="#0E498B">
                                 <DataGrid.Columns>
-
+                                    <DataGridTextColumn Header="Название" Binding="{Binding name}" Width="*"/>
+                                    <DataGridTextColumn Header="Серийный номер" Binding="{Binding serial}" Width="*"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <Button Content="Закончить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
+                            <Button x:Name="btn_end" Click="btn_end_Click" Content="Закончить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Добавить" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                    <TabItem Header="Удалить" Style="{StaticResource tbi_RoundedTabItemStyle}">
                         <Grid>
                             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
-                                <ComboBox Style="{StaticResource cb_main}" Tag="Тип" Width="310"/>
-                                <ComboBox Style="{StaticResource cb_main}" Tag="Название" Width="310"/>
+                                <ComboBox x:Name="cb_type" Style="{StaticResource cb_main}" Tag="Тип" Width="310"/>
+                                <ComboBox x:Name="cb_name" Style="{StaticResource cb_main}" Tag="Название" Width="310"/>
+                                <ComboBox x:Name="cb_serial" Style="{StaticResource cb_main}" Tag="Серийный номер" Width="310"/>
                             </StackPanel>
-                            <Button Content="Добавить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
+                            <Button x:Name="btn_del" Click="btn_del_Click" Content="Удалить" Style="{StaticResource btn_RoundedButtonStyle}" Height="30" Width="150" VerticalAlignment="Bottom"/>
                         </Grid>
                     </TabItem>
                 </TabControl>

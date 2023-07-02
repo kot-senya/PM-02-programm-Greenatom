@@ -28,5 +28,15 @@ namespace HelpAct
         {
             this.Close();
         }
+
+        private void btn_del_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_end_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
