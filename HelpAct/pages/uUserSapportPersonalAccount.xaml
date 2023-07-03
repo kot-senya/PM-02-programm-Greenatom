@@ -48,7 +48,7 @@
                                 <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,112,0,0" />
                                 <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,262,0,0" />
 
-                                <Button x:Name="bChange"  Width="201" Margin="542,337,0,38"  Content="Изменить Данные" HorizontalAlignment="Left" FontSize="18" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                                <Button x:Name="bChange" Click="bChange_Click" Width="201" Margin="542,337,0,38"  Content="Изменить Данные" HorizontalAlignment="Left" FontSize="18" Style="{StaticResource btn_RoundedButtonStyle}"/>
                             </Grid>
                         </Border>
                     </Viewbox>

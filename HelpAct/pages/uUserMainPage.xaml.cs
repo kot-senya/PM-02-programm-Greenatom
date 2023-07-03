@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using HelpAct.pages;
 
 namespace HelpAct
 {
@@ -76,6 +77,11 @@ namespace HelpAct
                 Uri fileUri = new Uri(openFileDialog.FileName);
                 aImage.Source = new BitmapImage(fileUri);
             }
+        }
+
+        private void bChange_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ChangeProfile(meme, "Обычный пользователь"));
         }
     }
 }

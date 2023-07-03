@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using HelpAct.pages;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,6 +71,11 @@ namespace HelpAct
                 Uri fileUri = new Uri(openFileDialog.FileName);
                 aImage.Source = new BitmapImage(fileUri);
             }
+        }
+
+        private void bChange_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ChangeProfile(meme, "ИТ - актив"));
         }
     }
 }

@@ -120,7 +120,7 @@
                                 <Rectangle Fill="#0E3969"  Height="2" Width="1700" Margin="0,240,-2,128"/>
                                 <TextBox x:Name ="uLogin"  Style="{StaticResource tbox_forAll}" Tag="Логин" Margin="250,281,0,0" Foreground="#0E3969" HorizontalAlignment="Left" VerticalAlignment="Top" />
                                 <TextBox x:Name="uPass" Tag="Пароль"  Style="{StaticResource tbox_forAll}"  Margin="347,281,0,0" Foreground="#0E3969" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                                <Button x:Name="bChange"  Width="201" Margin="542,337,0,38"  Content="Изменить Данные" HorizontalAlignment="Left" FontSize="18" Style="{StaticResource btn_RoundedButtonStyle}"/>
+                                <Button x:Name="bChange" Click="bChange_Click"  Width="201" Margin="542,337,0,38"  Content="Изменить Данные" HorizontalAlignment="Left" FontSize="18" Style="{StaticResource btn_RoundedButtonStyle}"/>
                             </Grid>
                         </Grid>
                     </Border>

@@ -1,0 +1,37 @@
+﻿<Page x:Class="HelpAct.pages.ChangeProfile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HelpAct.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ChangeProfile">
+    <Viewbox Height="400" Width="650">
+        <Border>
+            <Grid >
+                <Button x:Name="btn_close" Click="btn_close_Click" Style="{StaticResource bt_Close}" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <TabControl Style="{StaticResource tbc_RoundedTabControlStyle}" BorderThickness="0" Height="400" Width="650">
+                    <TabItem Header="Личные данные" Style="{StaticResource tbi_RoundedTabItemStyle}" BorderThickness="0">
+                        <StackPanel HorizontalAlignment="Left" Margin=" 10 0 0 0">
+                            <TextBox x:Name="txt_Surname" Style="{StaticResource tbox_upText}" Tag="Фамилия" Width="250" Margin="0"/>
+                            <TextBox x:Name="txt_Name" Style="{StaticResource tbox_upText}" Tag="Имя" Width="250" Margin="0"/>
+                            <TextBox x:Name="txt_Patronymic" Style="{StaticResource tbox_upText}" Tag="Отчество" Width="250" Margin="0"/>
+                            <TextBox x:Name="txt_Phone" Style="{StaticResource tbox_upText}" Tag="Телефон" Width="250" Margin="0"/>
+                            <TextBox x:Name="txt_Email" Style="{StaticResource tbox_upText}" Tag="Почта" Width="250" Margin="0"/>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="Параметры входа" Style="{StaticResource tbi_RoundedTabItemStyle}">
+                        <StackPanel HorizontalAlignment="Left" Margin=" 10 0 0 0">
+                            <TextBox x:Name="txt_Login" Style="{StaticResource tbox_upText}" Tag="Логин" Width="250" Margin="0"/>
+                            <PasswordBox x:Name="pbox_Pass" Style="{StaticResource pbox_upText}" Tag="Пароль" Width="250" Margin="0"/>
+                            <PasswordBox x:Name="pbox_rePass" Style="{StaticResource pbox_upText}" Tag="Повторите пароль" Width="250" Margin="0"/>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+                <Button x:Name="btn_change" Click="btn_change_Click" Content="Изменить данные" Style="{StaticResource  btn_RoundedButtonStyle}" Width="150" Height="30" VerticalAlignment="Bottom"/>
+            </Grid>
+        </Border>        
+    </Viewbox>
+    
+</Page>
