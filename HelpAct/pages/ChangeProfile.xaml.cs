@@ -48,7 +48,7 @@ namespace HelpAct.pages
 
             txt_Login.Text = data.Login;
             pbox_Pass.Password = data.Password;
-            pbox_rePass.Password = data.Password;
+            pbox_rePass.Password = pbox_Pass.Password;
         }
         private void btn_change_Click(object sender, RoutedEventArgs e)
         {
@@ -124,6 +124,11 @@ namespace HelpAct.pages
                 flag = false;
             }
             if (!checkRegestration.check_Email(txt_Email.Text))
+            {
+                messege += "- Некорректно введенна ПОЧТА\n";
+                flag = false;
+            }
+            if (!checkRegestration.check_NumberPhone(txt_Phone.Text))
             {
                 messege += "- Некорректно введенна ПОЧТА\n";
                 flag = false;
