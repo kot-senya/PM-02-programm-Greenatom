@@ -52,7 +52,7 @@ namespace HelpAct.pages
         }
         private void btn_change_Click(object sender, RoutedEventArgs e)
         {
-            if(check())
+            if (checkData())
             {
                 Users user = new Users()
                 {
@@ -97,8 +97,12 @@ namespace HelpAct.pages
                         break;
                 }
             }
+            else
+            {
+                MessageBox.Show("Возникла ошибка");
+            }
         }
-        private bool check()
+        private bool checkData()
         {
             bool flag = true;
             messege = "При изменении данных возникли следующие ошибки:\n\n";
@@ -119,22 +123,17 @@ namespace HelpAct.pages
                 messege += "- Некорректно введенно ОТЧЕСТВО\n";
                 flag = false;
             }
-            if (!checkRegestration.check_NumberPhone(txt_Phone.Text))
-            {
-                messege += "- Некорректно введенна ТЕЛЕФОН\n";
-                flag = false;
-            }
             if (!checkRegestration.check_Email(txt_Email.Text))
             {
                 messege += "- Некорректно введенна ПОЧТА\n";
                 flag = false;
             }
-            if(!checkRegestration.check_Login(txt_Login.Text))
+            if (!checkRegestration.check_Login(txt_Login.Text))
             {
                 messege += "- Некорректно введенн ЛОГИН\n";
                 flag = false;
             }
-            if(pbox_Pass.Password != pbox_rePass.Password)
+            if (pbox_Pass.Password != pbox_rePass.Password)
             {
                 messege += "- Некорректно введенн ПАРОЛЬ\n";
                 flag = false;

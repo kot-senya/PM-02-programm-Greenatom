@@ -60,7 +60,7 @@
                     <!--Менюшка-->
                     <StackPanel>
                         <RadioButton x:Name="mMain" Click="mMain_Click" Style="{StaticResource menuButton_Home}" Content="Главная" Tag ="{StaticResource colors}"/>
-                        <RadioButton x:Name="mUserProfile" Click="mUserProfile_Click" Style="{StaticResource menuButton_User}" Content="Личный кабинет" Tag ="{StaticResource colors}"/>
+                        <RadioButton x:Name="mUserProfile" Click="mUserProfile_Click" Style="{StaticResource menuButton_User}" Content="Личный кабинет" Tag ="{StaticResource colors}" Cursor="Hand"/>
                         <RadioButton x:Name="mAddRequest" Click="mAddRequest_Click" Style="{StaticResource menuButton_Request}" Content="Создать заявку" Tag ="{StaticResource colors}"/>
                         <RadioButton x:Name="mFullRequest" Click="mAllRequest_Click" Style="{StaticResource menuButton_AllRequest}" Content="Выполненные заявки" Tag ="{StaticResource colors}"/>
                     </StackPanel>
@@ -108,18 +108,17 @@
                                 <TextBlock HorizontalAlignment="Left" Margin="250,143,0,0" TextWrapping="Wrap" Text="ДР:" VerticalAlignment="Top" FontFamily="Forum" FontSize="18" RenderTransformOrigin="0.514,0.22" Width="377" Foreground="#FFC7C7C7"/>
                                 <TextBlock HorizontalAlignment="Left" Margin="250,193,0,0" TextWrapping="Wrap" Text="Телефон:" VerticalAlignment="Top" FontFamily="Forum" FontSize="18" RenderTransformOrigin="0.514,0.22" Width="377" Foreground="#FFC7C7C7"/>
                                 <TextBlock HorizontalAlignment="Left" Margin="250,243,0,0" TextWrapping="Wrap" Text="Почта:" VerticalAlignment="Top" FontFamily="Forum" FontSize="18" RenderTransformOrigin="0.514,0.22" Width="377" Foreground="#FFC7C7C7"/>
-                                <TextBlock x:Name ="uFIO"  Tag="Фио" Margin="250,228,173,148" Height="35" Cursor=""   />
-                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,212,0,0"  />
-                                <TextBlock x:Name ="uBer" Tag="День рождение" Margin="250,78,173,298" Height="35"   />
-                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,162,0,0" />
-                                <TextBlock x:Name ="uPhone" Tag="Телефон" Margin="250,128,173,248" Height="35"   />
-                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,112,0,0" />
-                                <TextBlock x:Name ="uEmail" Tag="Почта" Margin="250,178,173,198" Height="35"   />
-                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,262,0,0" />
 
-                                <Rectangle Fill="#0E3969"  Height="2" Width="1700" Margin="0,240,-2,128"/>
-                                <TextBox x:Name ="uLogin"  Style="{StaticResource tbox_forAll}" Tag="Логин" Margin="250,281,0,0" Foreground="#0E3969" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                                <TextBox x:Name="uPass" Tag="Пароль"  Style="{StaticResource tbox_forAll}"  Margin="347,281,0,0" Foreground="#0E3969" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <TextBlock x:Name ="txt_FIO"   Margin="336,96,174,299" Height="35" Width="290" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#FFC7C7C7"/>
+                                <TextBlock x:Name ="txt_db"    Margin="336,147,174,248" Height="35" Width="290" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#FFC7C7C7"/>
+                                <TextBlock x:Name ="txt_Email" Margin="336,198,174,197" Height="35" Width="290" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#FFC7C7C7"/>
+                                <TextBlock x:Name ="txt_phonr" Margin="336,246,174,149" Height="35" Width="290" FontFamily="{StaticResource Forum}" FontSize="15" Foreground="#FFC7C7C7"/>
+
+                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,212,0,0"  />
+                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,162,0,0" />
+                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,112,0,0" />
+                                <Rectangle HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="377" Fill="#FFC7C7C7" Margin="250,262,0,0" />
+                                
                                 <Button x:Name="bChange" Click="bChange_Click"  Width="201" Margin="542,337,0,38"  Content="Изменить Данные" HorizontalAlignment="Left" FontSize="18" Style="{StaticResource btn_RoundedButtonStyle}"/>
                             </Grid>
                         </Grid>

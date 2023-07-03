@@ -6,7 +6,7 @@
     <ImageBrush x:Key="ib_Home_grey" ImageSource="/picture/ic_home_grey.png"/>
     <ImageBrush x:Key="ib_Request_grey" ImageSource="/picture/ic_request_grey.png"/>
     <ImageBrush x:Key="ib_AllRequest_grey" ImageSource="/picture/ic_all_request_grey.png"/>
-
+    <ImageBrush x:Key="ib_People2_grey" ImageSource="/picture/ic_user_grey.png"/>
 
 
     <Style x:Key="menuButton_User" TargetType="{x:Type RadioButton}">
@@ -35,7 +35,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Border x:Name="ic"
-                                    Background="{StaticResource ib_People_grey}"
+                                    Background="{StaticResource ib_People2_grey}"
                                     BorderThickness="0"
                                     Height="25"
                                     Width="25"
